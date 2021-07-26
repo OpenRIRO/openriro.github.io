@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "path": "about.html",
+      "title": "О проекте OpenRIRO / About Open RIRO",
+      "description": "Краткая информация о проекте / A brief information about the RIRO project.  \n",
+      "author": [
+        {
+          "name": {},
+          "url": "https://www.linkedin.com/in/lutaya/"
+        },
+        {
+          "name": {},
+          "url": {}
+        }
+      ],
+      "date": "05-24-2021",
+      "contents": "\r\n\r\nContents\r\nЧто такое RIRO?\r\nЗачем всё это?\r\nWhat is RIRO?\r\nWhy do we need RIRO?\r\n\r\nЧто такое RIRO?\r\nRIRO - это проект Russian Index of the Research Organizations, запущенный в мае 2021 года. RIRO v.1.0 - представляет из себя набор таблиц, которые связывают российские юридические лица, задействованные в научных исследованиях, с идентификаторами и профилями российских и международных информационных систем:\r\nWikidata\r\nROR\r\nGRID\r\nMicrosoft Academic\r\nScopus\r\nSciVal\r\nWeb of Science\r\nInCites\r\nМониторинг вузов Минобрнауки\r\neLIBRARY.RU.\r\nВсе версии датасета будут доступны на Zenodo: https://zenodo.org/communities/riro/.\r\nПроцитировать датасет (без указания версии):\r\nSterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290\r\nФрагменты кода и примеры использования будут собираться на странице Examples.\r\nЗачем всё это?\r\nОсновная цель создания RIRO – открыть и связать профили и идентификаторы российских научных организаций в информационных системах. Объединение и соотнесение данных из этих систем необходимо как для изучения, так и для управления сетью организаций на современном этапе развития науки и данных о ней.\r\nРабота по созданию RIRO заключается далеко не только в механическом соединении источников. У каждого из существующих идентификаторов свои “детские болезни”: одни стараются быстро реагировать на переименования и реорганизации, но полностью переписывают историю со всеми правопредшественниками; другие, напротив, привязываются к “славным” именам мифических героев, которые уже не актуальны. В результате одна организация в различных сервисах может быть представлена совершенно различными наборами идентификаторов, что уменьшает и без этого ограниченную применимость наукометрических инструментов для анализа российской науки.\r\nОпубликованный датасет нацелен на решение следующих задач:\r\nпредоставить в распоряжение исследователей наборы идентификаторов, учитывающих особенности структуры и истории трансформации российских научных организаций.\r\nотразить актуальность и полноту сведений о российских научных организациях в проприетарных и открытых сервисах.\r\nпривлечь внимание исследователей к возможностях новых информационно-аналитических сервисов.\r\nвыбранный подход – публикация только идентификаторов и профилей, но не самих показателей – позволяет открыто объединить разнообразные источники данных из коммерческих и некоммерческих, российских и иностранных систем.\r\nWhat is RIRO?\r\nRIRO, as the article’s title suggests, is a project launched in May 2021 and devoted to the Russian organizations doing research. What title does not tell is that RIRO was designed as a public, open, and autonomous project, where\r\npublic tells that anyone can use it (free as in speech);\r\nopen suggests that anyone can contribute to it (no strings attached);\r\nautonomous stresses the fact that the project is self-governed (free as a bird).\r\nIn its current form RIRO v.1.0 is a set of tables linking the organization identifiers and profiles from various international registries (see a list below) to the Russian legal entities.\r\nWikidata\r\nROR\r\nGRID\r\nMicrosoft Academic\r\nScopus\r\nSciVal\r\nWeb of Science\r\nInCites\r\nUniversity Monitoring System by the Ministry of Science & Higher Education.\r\neLIBRARY.RU.\r\nAll files are available at Zenodo: https://zenodo.org/communities/riro/.\r\nTo cite RIRO dataset (without version):\r\nSterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290\r\nThe code and examples of use will be shared via Examples page.\r\nWhy do we need RIRO?\r\nThe project’s main purpose is to create and link the profiles (PID) corresponding to the Russian research organizations in the various information systems. One may argue that in those identifiers are already assigned to some organizaions. It looks so, but each register of identifiers has its own handicaps - some are trying to keep the most updated orgnames and rename the accounts, wiping out old names and connections; the others have more conservative record update policy and provide a lot of obsolete names; most do not follow the Russian mergers in science; and none is great in covering the small organizations (which is a terra incognita for any citation index). As a result, the identifiers provided by the international services suffer from a patchy coverage and have a limited value for the research assessment and scientometric analysis.\r\nWith the RIRO we aim to:\r\ncreate, update, and share a public dataset of the organization identifiers that reflects not only their current statuses, but also their recent (at least) transformations;\r\nasssess how complete is a representation of the Russian organizations in the international registries;\r\nattract the researh community’s attention to the new information services and its features.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-26T09:29:46+03:00"
+    },
+    {
+      "path": "Examples.html",
+      "title": "Примеры использования",
+      "description": "На этой странице со временем появятся ссылки на исследования, в которых использовались таблицы индекса RIRO, или готовые фрагменты кода, который облегчает их использование.\n",
+      "author": [
+        {
+          "name": {},
+          "url": "https://www.linkedin.com/in/lutaya/"
+        },
+        {
+          "name": {},
+          "url": {}
+        }
+      ],
+      "date": "07-25-2021",
+      "contents": "\r\nWoS-Fractional-Counting-Script - скрипт на Python для фракционного подсчёта вклада организаций по данным Web of Science\r\nUniversity-fractional-counting-with-Pybliometrics - скрипт на Python для фракционного подсчёта вклада организаций по данным Scopus\r\nСкачиваем датасет RIRO с Zenodo - способы скачивания последней версии датасета RIRO с примера на R\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-26T09:30:16+03:00"
+    },
+    {
       "path": "index.html",
       "title": "OpenRIRO",
       "author": [],
