@@ -1,0 +1,12 @@
+{
+  "articles": [
+    {
+      "path": "index.html",
+      "title": "OpenRIRO",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-26T09:25:47+03:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

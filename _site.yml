@@ -3,7 +3,7 @@ title: "Russian Index of Research Organizations"
 theme: theme.css
 description: |
   Using R to solve the practical tasks in the library information science and other fields.  
-output_dir: "_site"
+output_dir: "."
 base_url: https:/openriro.github.io/
 google_analytics: "G-1WH3PE2C1Z"
 rss:
