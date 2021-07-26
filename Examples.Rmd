@@ -1,0 +1,30 @@
+---
+title: "Примеры использования"
+description: |
+    На этой странице со временем появятся ссылки на исследования, в которых использовались таблицы индекса RIRO, или готовые фрагменты кода, который облегчает их использование.
+author:
+  - first_name: "Aleksei"
+    last_name: "Lutai" 
+    url: https://www.linkedin.com/in/lutaya/
+    orcid_id: 0000-0003-1341-781X
+  - first_name: "Ivan"
+    last_name: "Sterligov"
+    orcid_id: 0000-0001-9736-4713   
+date: 07-25-2021
+creative_commons: CC BY
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    highlight: kate
+    highlight_downlit: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+- [WoS-Fractional-Counting-Script](https://github.com/IvanSterligov/WoS-Fractional-Counting-Script) - скрипт на Python для фракционного подсчёта вклада организаций по данным Web of Science  
+
+- [University-fractional-counting-with-Pybliometrics](https://github.com/IvanSterligov/WoS-Fractional-Counting-Script) - скрипт на Python для фракционного подсчёта вклада организаций по данным Scopus
+
+- [Скачиваем датасет RIRO с Zenodo](https://openriro.github.io/posts/download-riro-with-r) - способы скачивания последней версии датасета RIRO с примера на R  

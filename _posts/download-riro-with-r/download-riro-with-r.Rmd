@@ -1,0 +1,221 @@
+---
+title: "Скачиваем датасет RIRO с Zenodo"
+description: |
+    Рассмотрены несколько способов загрузки последней версии датасета RIRO с репозитория Zenodo. Примеры кода приведены на языке R.
+author:
+  - first_name: "Aleksei"
+    last_name: "Lutai" 
+    url: https://www.linkedin.com/in/lutaya/
+    orcid_id: 0000-0003-1341-781X
+  - first_name: "Ivan"
+    last_name: "Sterligov"
+    orcid_id: 0000-0001-9736-4713
+date: 07-26-2021
+categories:
+  - riro
+  - zenodo
+  - r
+  - zen4R
+preview: images/zenodo.png
+creative_commons: CC BY
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    highlight: kate
+    highlight_downlit: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE, eval=TRUE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	class.output = "outputstyle",
+	include = TRUE
+)
+Sys.setlocale("LC_CTYPE","russian")
+Sys.setlocale("LC_COLLATE","russian")
+Sys.setlocale("LC_TIME", "russian")
+```
+
+Все версии датасета RIRO (Российского индекса научных организаций) публикуются в [репозитории RIRO](https://zenodo.org/communities/riro/) на платформе Zenodo. Набор таблиц можно скачать с Zenodo вручную или программными средствами, используя [OAI-PMH Harvesting API](https://zenodo.org/oai2d?verb=ListRecords&set=user-riro&metadataPrefix=oai_dc) или [REST API](https://developers.zenodo.org/).
+
+Ниже показаны различные способы скачивания последней версии датасета RIRO с помощью кода на языке R. Последний способ скачивания подойдет для всех пользователей, в том числе и для тех, кто не использует языки программирования.
+
+Открываем сессию в R, загружаем настройки и пакеты.
+
+```{r message=FALSE, warning=FALSE, include=TRUE, echo = TRUE}
+library(dplyr)
+library(readr)
+library(tidyr)
+library(purrr)
+library(DT)
+
+onedrive <- list.dirs("C:/Users", recursive = FALSE) %>% 
+  .[grepl("alexe|WD|lutay",.)] %>% list.dirs(., recursive = FALSE) %>% 
+  .[grepl("onedrive",., ignore.case = TRUE)]
+
+options(DT.options = list(pageLength = 6, dom = "Brtip",  
+  deferRender = TRUE, ordering = TRUE, autoWidth = TRUE, scrollX = TRUE,
+  language = list(
+    url = 'https://cdn.datatables.net/plug-ins/1.10.11/i18n/Russian.json')))
+```
+
+Создаем директорию для хранения файлов RIRO.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+riro_dir <- "D://RIRO_tables/"
+if(!dir.exists(riro_dir)){dir.create(riro_dir)}
+```
+
+## Способ 1. Пакет Zen4R {#zenodo_zen4R}
+
+- 1. Установите клиент для Zenodo API [zen4R](https://github.com/eblondel/zen4R). Руководство по работе с пакетом доступно по ссылке https://github.com/eblondel/zen4R/wiki.
+
+```{r include=TRUE, warning=FALSE, message=FALSE, eval=FALSE}
+require("remotes")
+remotes::install_github("eblondel/zen4R")
+```
+
+- 2. Зарегистрируйтесь на Zenodo и получите токен [здесь](https://zenodo.org/account/settings/applications/tokens/new/)
+
+```{r include=TRUE, warning=FALSE, message=FALSE, eval=FALSE}
+onedrive <- list.dirs("C:/Users", recursive = FALSE) %>% 
+  .[grepl("alexe|WD|lutay",.)] %>% list.dirs(., recursive = FALSE) %>% 
+  .[grepl("onedrive",., ignore.case = TRUE)]
+your_zenodo_token <- read_file(paste0(onedrive, "/zenodo.txt"))
+```
+
+Осталось загрузить библиотеку zen4R, запросить последнюю версию DOI для ConceptID 4775290, получить список файлов и сохранить в приготовленную директорию.  
+
+```{r include=TRUE, warning=FALSE, message=FALSE, eval=FALSE}
+library(zen4R)
+
+# initialize a session
+zenodo <- ZenodoManager$new(token = your_zenodo_token,  logger = "INFO")
+
+# request the Concept ID (more info -> https://help.zenodo.org/#versioning)
+# 4775290 is a concept ID common for all versions of RIRO - do not change it 
+my_rec <- zenodo$getDepositionByConceptId("4775290")
+last_doi <- my_rec$getLastDOI()
+my_rec <- zenodo$getDepositionByDOI(last_doi)
+
+# get the list of files with names and URLs
+files <- my_rec$files %>% map_df(~.x %>% flatten()) %>% 
+  select(filename, filesize, download)
+
+# download it
+walk2(files$download, paste0(riro_dir, files$filename), 
+      ~download.file(url =.x, destfile = .y))
+
+# At https://help.zenodo.org/#versioning Zenodo says that:
+# Currently the Concept DOI resolves to the landing page of the latest version of your record. 
+# This is not fully correct, and in the future we will change this to create a landing page 
+# specifically representing the concept behind the record and all of its versions.
+# so one day we may have to retrieve the latest DOI my_rec$getLastDOI() or smth else
+```
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+list.files(riro_dir)
+```
+
+Для тех, кто хотел бы избежать установки новых пакетов и регистрации, подойдет более прямолинейный способ.
+
+## Способ 2. Парсим сайт Zenodo {#zenodo_parse}
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE}
+library(rvest)
+library(stringr)
+
+zenodo_links <- read_html("https://doi.org/10.5281/zenodo.4775290", 
+                          encoding = "UTF-8") %>%  
+  html_nodes(".btn-default") %>% html_attr("href") %>% 
+  .[grepl("table", .)&grepl("csv", .)] %>% 
+  paste0("https://zenodo.org", .)
+  
+files <-  data.frame(download = zenodo_links) %>% 
+  mutate(filename = stringr::str_extract(download, "v\\..+?\\.csv"))
+
+# download it
+if(length(list.files(riro_dir))!=12){
+  walk2(files$download, paste0(riro_dir, files$filename), 
+        ~download.file(url =.x, destfile = .y))
+}
+
+files %>% write_excel_csv(paste0(onedrive, "/OpenRIROblog/latest_riro_links.csv"))
+```
+
+## Способ 3. Файл с прямыми URL-ссылками {#zenodo_urls}
+
+CSV-файл с прямыми ссылками на таблицы последней версии хранится в корневой папке сайта с именем [latest_riro_links.csv](https://openriro.github.io/latest_riro_links.csv). Код для скачивания файлов с помощью R такой же, как выше. 
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+read_csv("https://openriro.github.io/latest_riro_links.csv") %>% 
+  mutate(download = paste0('<a href=\"',download,'\" target=\"_blank\">',download,'</a>')) %>% 
+  datatable(rownames = FALSE, escape = FALSE,
+            options = list(pageLength = 6, deferRender = FALSE,
+                           dom = "Brtip",  autoWidth = FALSE))
+```
+
+Обращаем Ваше внимание, что в таблице выше ссылки приведены в качестве примера для того, чтобы показать содержимое файла csv.
+
+### Acknowledgments {.appendix}
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+pkgs <- c('dplyr', 'readr', 'tidyr', 'purrr', 'stringr',
+          'rvest', 'zen4R', 'DT', 'knitr', 'rmarkdown')
+
+do.call('c',lapply(pkgs, citation)) %>% sort()
+```
+
+Allaire J, Xie Y, McPherson J, Luraschi J, Ushey K, Atkins A, Wickham H, Cheng J,
+Chang W, Iannone R (2021). _rmarkdown: Dynamic Documents for R_. R package version
+2.7, <URL: https://github.com/rstudio/rmarkdown>.
+
+Blondel E (2021). _zen4R: Interface to 'Zenodo' REST API_. R package version 0.4-3,
+<URL: https://github.com/eblondel/zen4R>.
+
+Henry L, Wickham H (2020). _purrr: Functional Programming Tools_. R package version
+0.3.4, <URL: https://CRAN.R-project.org/package=purrr>.
+
+Wickham H (2020). _tidyr: Tidy Messy Data_. R package version 1.1.2, <URL:
+https://CRAN.R-project.org/package=tidyr>.
+
+Wickham H (2019). _stringr: Simple, Consistent Wrappers for Common String
+Operations_. R package version 1.4.0, <URL:
+https://CRAN.R-project.org/package=stringr>.
+
+Wickham H (2021). _rvest: Easily Harvest (Scrape) Web Pages_. R package version
+1.0.0, <URL: https://CRAN.R-project.org/package=rvest>.
+
+Wickham H, Francois R, Henry L, Muller K (2021). _dplyr: A Grammar of Data
+Manipulation_. R package version 1.0.3, <URL:
+https://CRAN.R-project.org/package=dplyr>.
+
+Wickham H, Hester J (2020). _readr: Read Rectangular Text Data_. R package version
+1.4.0, <URL: https://CRAN.R-project.org/package=readr>.
+
+Xie Y (2020). _knitr: A General-Purpose Package for Dynamic Report Generation in R_.
+R package version 1.30, <URL: https://yihui.org/knitr/>.
+
+Xie Y (2015). _Dynamic Documents with R and knitr_, 2nd edition. Chapman and
+Hall/CRC, Boca Raton, Florida. ISBN 978-1498716963, <URL: https://yihui.org/knitr/>.
+
+Xie Y (2014). “knitr: A Comprehensive Tool for Reproducible Research in R.” In
+Stodden V, Leisch F, Peng RD (eds.), _Implementing Reproducible Computational
+Research_. Chapman and Hall/CRC. ISBN 978-1466561595, <URL:
+http://www.crcpress.com/product/isbn/9781466561595>.
+
+Xie Y, Allaire J, Grolemund G (2018). _R Markdown: The Definitive Guide_. Chapman
+and Hall/CRC, Boca Raton, Florida. ISBN 9781138359338, <URL:
+https://bookdown.org/yihui/rmarkdown>.
+
+Xie Y, Cheng J, Tan X (2021). _DT: A Wrapper of the JavaScript Library
+'DataTables'_. R package version 0.17, <URL: https://CRAN.R-project.org/package=DT>.
+
+Xie Y, Dervieux C, Riederer E (2020). _R Markdown Cookbook_. Chapman and Hall/CRC,
+Boca Raton, Florida. ISBN 9780367563837, <URL:
+https://bookdown.org/yihui/rmarkdown-cookbook>.

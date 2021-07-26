@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>RIRO v.1.1 (eng)</title>
+  
+  <meta property="description" itemprop="description" content="The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1)."/>
+  
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-07-26"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-07-26"/>
+  <meta name="article:author" content="Aleksei Lutai"/>
+  <meta name="article:author" content="Ivan Sterligov"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="RIRO v.1.1 (eng)"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1)."/>
+  <meta property="og:locale" content="en_US"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="RIRO v.1.1 (eng)"/>
+  <meta property="twitter:description" content="The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1)."/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","preview","creative_commons","output"]}},"value":[{"type":"character","attributes":{},"value":["RIRO v.1.1 (eng)"]},{"type":"character","attributes":{},"value":["The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1).\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["first_name","last_name","url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Aleksei"]},{"type":"character","attributes":{},"value":["Lutai"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/lutaya/"]},{"type":"character","attributes":{},"value":["0000-0003-1341-781X"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["first_name","last_name","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Ivan"]},{"type":"character","attributes":{},"value":["Sterligov"]},{"type":"character","attributes":{},"value":["0000-0001-9736-4713"]}]}]},{"type":"character","attributes":{},"value":["07-26-2021"]},{"type":"character","attributes":{},"value":["riro","ror","wikidata","microsoft academic","scopus","scival","web of science","incites","elibrary"]},{"type":"character","attributes":{},"value":["images/chart_examples_v1.1_eng.png"]},{"type":"character","attributes":{},"value":["CC BY"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","code_folding","highlight","highlight_downlit","toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["kate"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/chart_examples_v1.1_eng.png","images/chart_upset_v1.1.eng.png","rirov11eng_files/anchor-4.2.2/anchor.min.js","rirov11eng_files/bowser-1.9.3/bowser.min.js","rirov11eng_files/crosstalk-1.1.0.1/css/crosstalk.css","rirov11eng_files/crosstalk-1.1.0.1/js/crosstalk.js","rirov11eng_files/crosstalk-1.1.0.1/js/crosstalk.js.map","rirov11eng_files/crosstalk-1.1.0.1/js/crosstalk.min.js","rirov11eng_files/crosstalk-1.1.0.1/js/crosstalk.min.js.map","rirov11eng_files/datatables-binding-0.17/datatables.js","rirov11eng_files/datatables-css-0.0.0/datatables-crosstalk.css","rirov11eng_files/distill-2.2.21/template.v2.js","rirov11eng_files/dt-core-1.10.20/css/jquery.dataTables.extra.css","rirov11eng_files/dt-core-1.10.20/css/jquery.dataTables.min.css","rirov11eng_files/dt-core-1.10.20/js/jquery.dataTables.min.js","rirov11eng_files/htmlwidgets-1.5.3/htmlwidgets.js","rirov11eng_files/jquery-1.12.4/jquery.min.js","rirov11eng_files/jquery-1.12.4/LICENSE.txt","rirov11eng_files/popper-2.6.0/popper.min.js","rirov11eng_files/tippy-6.2.7/tippy-bundle.umd.min.js","rirov11eng_files/tippy-6.2.7/tippy-light-border.css","rirov11eng_files/tippy-6.2.7/tippy.css","rirov11eng_files/tippy-6.2.7/tippy.umd.min.js","rirov11eng_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+  
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+  
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+  
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+  
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+  
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+  
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  /* Tweak code blocks */
+  
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+  
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+  
+  d-article div.sourceCode {
+    background-color: white;
+  }
+  
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  d-article pre a {
+    border-bottom: none;
+  }
+  
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+  
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+  
+  d-article pre {
+    font-size: 14px;
+  }
+  
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for d-contents */
+  
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+  
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+  
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  .d-contents li {
+    list-style-type: none
+  }
+  
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+  
+  .d-contents ul {
+    padding-left: 1em
+  }
+  
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+  
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+  
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+  
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+  
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+  
+  
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+  
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  /* Citations */
+  
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+  
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+  
+  /* Citation hover box */
+  
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+  
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Include appendix styles here so they can be overridden */
+  
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+  
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+  
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+  
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+  
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+  
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+  
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  d-appendix > * {
+    grid-column: text;
+  }
+  
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+  
+  /* Include footnote styles here so they can be overridden */
+  
+  d-footnote-list {
+    contain: layout style;
+  }
+  
+  d-footnote-list > * {
+    grid-column: text;
+  }
+  
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+  
+  
+  
+  /* Anchor.js */
+  
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+  
+  /* Styles for posts lists (not auto-injected) */
+  
+  
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+  
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+  
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+  
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+  
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+  
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+  
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+  
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+  
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+  
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+  
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+  
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+  
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .posts-list img {
+    opacity: 1;
+  }
+  
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+  
+  .posts-more {
+    clear: both;
+  }
+  
+  
+  .posts-sidebar {
+    font-size: 16px;
+  }
+  
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+  
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+  
+  .categories li>a {
+    border-bottom: none;
+  }
+  
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  
+  .categories .active {
+    font-weight: 600;
+  }
+  
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+  
+  
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+  
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+  
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-contents').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <script src="rirov11eng_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+  <script src="rirov11eng_files/jquery-1.12.4/jquery.min.js"></script>
+  <link href="rirov11eng_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="rirov11eng_files/datatables-binding-0.17/datatables.js"></script>
+  <link href="rirov11eng_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="rirov11eng_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="rirov11eng_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+  <link href="rirov11eng_files/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+  <script src="rirov11eng_files/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+  <script src="rirov11eng_files/popper-2.6.0/popper.min.js"></script>
+  <link href="rirov11eng_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="rirov11eng_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="rirov11eng_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="rirov11eng_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="rirov11eng_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="rirov11eng_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="rirov11eng_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"RIRO v.1.1 (eng)","description":"The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1).","authors":[{"author":"Aleksei Lutai","authorURL":"https://www.linkedin.com/in/lutaya/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":"0000-0003-1341-781X"},{"author":"Ivan Sterligov","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":"0000-0001-9736-4713"}],"publishedDate":"2021-07-26T00:00:00.000+03:00","citationText":"Lutai & Sterligov, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>RIRO v.1.1 (eng)</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">riro</div>
+<div class="dt=tag">ror</div>
+<div class="dt=tag">wikidata</div>
+<div class="dt=tag">microsoft academic</div>
+<div class="dt=tag">scopus</div>
+<div class="dt=tag">scival</div>
+<div class="dt=tag">web of science</div>
+<div class="dt=tag">incites</div>
+<div class="dt=tag">elibrary</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1).</p></p>
+</div>
+
+<div class="d-byline">
+  
+  true
+  
+,   
+  true
+  
+<br/>07-26-2021
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#riro-версия-1.1">RIRO (версия 1.1)</a></li>
+<li><a href="#selection-criteria-for-organizations">Selection Criteria for Organizations</a></li>
+<li><a href="#special-notes">Special Notes</a></li>
+<li><a href="#dataset">RIRO dataset</a></li>
+<li><a href="#table-1---official-info">Table 1 - Official Info</a></li>
+<li><a href="#table-2---locations-and-geodata">Table 2 - Locations and Geodata</a></li>
+<li><a href="#table-3---hierarchy">Table 3 - Hierarchy</a></li>
+<li><a href="#table-4---ror">Table 4 - ROR</a></li>
+<li><a href="#table-5---wikidata">Table 5 - Wikidata</a></li>
+<li><a href="#table-6---scopus">Table 6 - Scopus</a></li>
+<li><a href="#table-7---microsoft-academic">Table 7 - Microsoft Academic</a></li>
+<li><a href="#table-8---incites">Table 8 - InCites</a></li>
+<li><a href="#table-9---scival">Table 9 - SciVal</a></li>
+<li><a href="#table-10---russian-universities-assessment-system-by-the-ministry-of-science-higher-education">Table 10 - Russian Universities Assessment System (by the Ministry of Science &amp; Higher Education)</a></li>
+<li><a href="#table-11---web-of-science">Table 11 - Web of Science</a></li>
+<li><a href="#table12">Table 12. eLIRBARY.ru</a></li>
+<li><a href="#all-ids-for-3-organizations">All IDs for 3 organizations</a></li>
+<li><a href="#feedback">Feedback</a><ul>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<div id="hello" class="translation">
+<p><a href="https://openriro.github.io/posts/rirov11">IN RUSSIAN</a></p>
+</div>
+<h2 id="riro-версия-1.1">RIRO (версия 1.1)</h2>
+<p>In these 2 months since a launch of RIRO’s <a href="https://openriro.github.io/posts/rirov10eng">first edition</a> (<a href="https://openriro.github.io/about">what is RIRO?</a>) we received a positive feedback confirming the project’s value and public recognition.</p>
+<p>In the latest RIRO release (v.1.1.2) you’ll see few important updates:</p>
+<ul>
+<li><p>there’s a new table with the Org IDs used by Russian aggregator <a href="https://elibrary.ru/defaultx.asp?">eLIBRARY.ru</a> and their sattelite project <a href="https://elibrary.ru/project_risc.asp">Russian Science Citation Index</a> (not to be confused with the Clarivate’s product).</p></li>
+<li><p>all active organizations (at parent level) we added the codes and values for OKOGU - a classificator of the state governing bodies (most of which are the ministires).</p></li>
+<li><p>a list of organizations was extended up to 2818 active parent orgs.</p></li>
+<li><p>an official (registration) information for all the organizations was updated in July.</p></li>
+<li><p>the table with Wikidata records was also updated and revised.</p></li>
+</ul>
+<p>An UpSet diagram below shows the sets of organizations listen in RIRO (v.1.1.2) and matched to the various identifiers. Only the head and active (existing) organizations are counted here, so the identifiers referring to the branches or to the predecessors liquidated via acquisition, are not counted.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>img.dir</span>, <span class='st'>"chart_upset_v1.1.eng.png"</span><span class='op'>)</span>
+<span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='va'>filename</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="images/chart_upset_v1.1.eng.png" width="1417" /></p>
+</div>
+<p>With v.1.1 release RIRO project also gets this website - here we plan to publish not only the RIRO updates, but also the links to research where RIRO was used and the code excerpts. If you utilized RIRO in your study and would like to share your experience with other people, send us a link and we will be happy to place it on the Examples page.</p>
+<h2 id="selection-criteria-for-organizations">Selection Criteria for Organizations</h2>
+<p>RIRO is about research, so in general any organization that appear in the affiliations of the scientific articles is a good candidate for RIRO. Participation is free (as in speech). And yet some organizations have been prioritized to appear in RIRO, those are:</p>
+<ul>
+<li><p>state (federal/regonal) organizations doing fundamental or applied research (research centres, scientific institutes, universities, large clinical centers or hospitals, reserves, museums, etc.);</p></li>
+<li><p>private organizations (mostly universities).</p></li>
+</ul>
+<p>We have not even reviewed the entities associated with the Russian state corporations (RosAtom, RosSpace, RosTech) or the military ones.</p>
+<h2 id="special-notes">Special Notes</h2>
+<ul>
+<li><p>RIRO does not copy <strong>all the attributes</strong> linked to the records in the sources. We selected only the most useful (to our opinion) fields. In future RIRO releases we may add more fields.</p></li>
+<li><p>The data in the tables 4-11 is the same as in the original sources - we have not changed the original records.</p></li>
+<li><p>Some tables share the common fields. For example, ROR (table 4) has a column Wikidata, and Wikidata (table 5) has a column ROR. We did not chang or check those links, they are kept as they are present in the original sources, but renamed to avoid confusion (added a prefix referring to the source - ror_wikidata, wd_ror, etc.</p></li>
+<li><p>Matching the identifiers to the organizations was made based on available information (name, location) - we have not checked if the data asssociated with the identifiers (in the source databases) is correctly assigned to the organizations.</p></li>
+</ul>
+<h2 id="dataset">RIRO dataset</h2>
+<p>All versions of RIRO dataset (CSV tables) can be downloaded from Zenodo <a href="https://zenodo.org/communities/riro/">community</a>, via <a href="https://zenodo.org/oai2d?verb=ListRecords&amp;set=user-riro&amp;metadataPrefix=oai_dc">OAI-PMH Harvesting API</a> or by using <a href="https://developers.zenodo.org/">REST API</a>. Zenodo – is one of the leading data repositories supported by CERN (<a href="https://help.zenodo.org/features/">details</a>).</p>
+<p>To cite RIRO dataset (without version):</p>
+<ul>
+<li>Sterligov, Ivan, &amp; Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.4775290" class="uri">https://doi.org/10.5281/zenodo.4775290</a></li>
+</ul>
+<p>To cite the latest version of RIRO (v.1.1.2):</p>
+<ul>
+<li>Sterligov, Ivan, &amp; Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) (Version 1.1.2) [Data set]. Zenodo. <a href="http://doi.org/10.5281/zenodo.5136473" class="uri">http://doi.org/10.5281/zenodo.5136473</a></li>
+</ul>
+<p>The CSV tables share a primary key named code, so one can easily join the tables or build a database.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>riro_versions</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.dirs</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>dir</span>, <span class='st'>"/final_tables/"</span><span class='op'>)</span>, recursive <span class='op'>=</span>  <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+   <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>.</span>, decreasing <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"1.1.1"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span>
+
+<span class='va'>riro_tables</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='va'>riro_versions</span>, full.names <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<p>Below are the parts of each table corrsponding to the 3 organizations selected as an example:</p>
+<ul>
+<li><p>Siberian Federal University</p></li>
+<li><p>Perm Federal Research Centre of the Ural branch of the Russian Academy of Sciences</p></li>
+<li><p>Southern Federal University.</p></li>
+</ul>
+<h2 id="table-1---official-info">Table 1 - Official Info</h2>
+<p>This table comprises the basic organization details - <a href="https://www.wikidata.org/wiki/Q16701931">OGRN</a> (Primary State Registration Number), <a href="https://www.wikidata.org/wiki/Q47489031">INN</a> (Taxpayer Identification Number), KPP (Tax Registration Reason Code), full &amp; short names, status {active, liquidated, in reorganization process}, and the branch type {head or branch}, and also since v.1.1. - OKOGU (the state governing body identificator).</p>
+<p>A table below lists the legal entities found by OGRN and their branches (the branch organization and its head entity share same OGRN and INN). To save some space a column with the short names column is not included.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t1</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table1_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>test_group</span> <span class='op'>&lt;-</span> <span class='va'>t1</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>ogrn</span> <span class='op'>%in%</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1025900517378"</span>, <span class='st'>"1022402137460"</span>, <span class='st'>"1026103165241"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>test_group</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>select</span><span class='op'>(</span><span class='va'>code</span>, <span class='va'>level</span>, <span class='va'>status</span>, <span class='va'>name_full</span>, <span class='va'>full_okogu</span>, <span class='va'>ogrn</span>, <span class='va'>inn</span>, <span class='va'>kpp</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+<span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, 
+      class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+      options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'600px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-7bbbd971f58043e573a8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7bbbd971f58043e573a8">{"x":{"filter":"none","data":[["t8w7s4","p8b2b5","p8h7x7","s7v5y9","m8v2s2","s6g7r2","z8h2m4","r9b8s7","n8m7g5","n4n4s3","z9t2h8","p6z5t4","r3x2z9","x5n9x6","y4b7t4","m7z6v2","n8y5z9","p5i7s4"],["Head","Branch","Branch","Branch","Head","Branch","Branch","Branch","Branch","Branch","Head","Branch","Branch","Branch","Branch","Branch","Branch","Branch"],["Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация","Действующая организация"],["ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ","САЯНО-ШУШЕНСКИЙ ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ","ЛЕСОСИБИРСКИЙ ПЕДАГОГИЧЕСКИЙ ИНСТИТУТ-ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ","ХАКАССКИЙ ТЕХНИЧЕСКИЙ ИНСТИТУТ-ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ","ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ ПЕРМСКИЙ ФЕДЕРАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК","ПЕРМСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ СЕЛЬСКОГО ХОЗЯЙСТВА - ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ НАУКИ ПЕРМСКОГО ФЕДЕРАЛЬНОГО ИССЛЕДОВАТЕЛЬСКОГО ЦЕНТРА УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК","ГОРНЫЙ ИНСТИТУТ УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК - ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ НАУКИ ПЕРМСКОГО ФЕДЕРАЛЬНОГО ИССЛЕДОВАТЕЛЬСКОГО ЦЕНТРА УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК","ИНСТИТУТ ТЕХНИЧЕСКОЙ ХИМИИ УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК - ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ НАУКИ ПЕРМСКОГО ФЕДЕРАЛЬНОГО ИССЛЕДОВАТЕЛЬСКОГО ЦЕНТРА УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК","ИНСТИТУТ МЕХАНИКИ СПЛОШНЫХ СРЕД УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК - ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ НАУКИ ПЕРМСКОГО ФЕДЕРАЛЬНОГО ИССЛЕДОВАТЕЛЬСКОГО ЦЕНТРА УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК","ИНСТИТУТ ЭКОЛОГИИ И ГЕНЕТИКИ МИКРООРГАНИЗМОВ УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК - ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ НАУКИ ПЕРМСКОГО ФЕДЕРАЛЬНОГО ИССЛЕДОВАТЕЛЬСКОГО ЦЕНТРА УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК","ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ","ФИЛИАЛ ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ, ФГАОУ ВО ЮФУ, ЮФУ","ПРЕДСТАВИТЕЛЬСТВО ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ, ФГАОУ ВО \"ЮФУ\", ЮФУ (Г МАЙКОП)","ПРЕДСТАВИТЕЛЬСТВО ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ, ФГАОУ ВО \"ЮФУ\", ЮФУ (Г СОЧИ)","ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ В Г. ГЕЛЕНДЖИКЕ КРАСНОДАРСКОГО КРАЯ","ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ В Г. ЖЕЛЕЗНОВОДСКЕ СТАВРОПОЛЬСКОГО КРАЯ","ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ В Г. МАХАЧКАЛЕ РЕСПУБЛИКИ ДАГЕСТАН","ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО АВТОНОМНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ ВЫСШЕГО ОБРАЗОВАНИЯ ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ В Г. НОВОШАХТИНСКЕ РОСТОВСКОЙ ОБЛАСТИ"],["Министерство науки и высшего образования Российской Федерации",null,null,null,"Министерство науки и высшего образования Российской Федерации",null,null,null,null,null,"Министерство науки и высшего образования Российской Федерации",null,null,null,null,null,null,null],["1022402137460","1022402137460","1022402137460","1022402137460","1025900517378","1025900517378","1025900517378","1025900517378","1025900517378","1025900517378","1026103165241","1026103165241","1026103165241","1026103165241","1026103165241","1026103165241","1026103165241","1026103165241"],["2463011853","2463011853","2463011853","2463011853","5902292103","5902292103","5902292103","5902292103","5902292103","5902292103","6163027810","6163027810","6163027810","6163027810","6163027810","6163027810","6163027810","6163027810"],["246301001","190202001","245402001","190102001","590201001","594843001","590443001","590243002","590243001","590343001","616301001","092043001","010505001","010505001","230431001","262702001","057102001","615102002"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>level<\/th>\n      <th>status<\/th>\n      <th>name_full<\/th>\n      <th>full_okogu<\/th>\n      <th>ogrn<\/th>\n      <th>inn<\/th>\n      <th>kpp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":true,"scrollX":true,"columnDefs":[{"width":"600px","targets":3}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>Each row has its unique code whih serves as a primary key for all the tables of the RIRO database.</p>
+<h2 id="table-2---locations-and-geodata">Table 2 - Locations and Geodata</h2>
+<p>Table 2 comprises the full address and its separate parts (in Russian), accompanied with the geocode, geo coordinates and time zone. Table 2 is the only table in RIRO having 1:1 correspondance to Table 1 via code. The other tables can have few rows for one code.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t2</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table2_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>t2</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>code</span> <span class='op'>%in%</span> <span class='va'>test_group</span><span class='op'>$</span><span class='va'>code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, 
+            class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'450px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-4e284198ae7f2e0ffe9a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4e284198ae7f2e0ffe9a">{"x":{"filter":"none","data":[["t8w7s4","p8b2b5","p8h7x7","s7v5y9","m8v2s2","s6g7r2","z8h2m4","r9b8s7","n8m7g5","n4n4s3","z9t2h8","p6z5t4","r3x2z9","x5n9x6","y4b7t4","m7z6v2","n8y5z9","p5i7s4"],["1502026","1492893","1500607","1512236","511196","511180","511196","511196","511196","511196","501175","552927","528293","491422","561667","463340","532096","501165"],["56.0038282","52.8509993","58.1833898","53.7258898","58.015771","57.8626633","58.0002886","58.0576174","58.0583195","57.997332","47.224683","43.9389783","44.6143121","43.623474","44.5529456","44.139427","42.9665223","47.7795784"],["92.7702962","91.4234876","92.5310912","91.4411925","56.253644","56.2856534","56.2609514","56.2406545","56.2410387","56.2143203","39.7283349","42.5155345","40.1127162","39.72278","38.0608654","43.016214","47.5116384","39.9246132"],["UTC+7","UTC+7","UTC+7","UTC+7","UTC+5","UTC+5","UTC+5","UTC+5","UTC+5","UTC+5","UTC+3","UTC+3","UTC+3","UTC+3","UTC+3","UTC+3","UTC+3","UTC+3"],["Сибирский","Сибирский","Сибирский","Сибирский","Приволжский","Приволжский","Приволжский","Приволжский","Приволжский","Приволжский","Южный","Северо-Кавказский","Южный","Южный","Южный","Северо-Кавказский","Северо-Кавказский","Южный"],["660041, КРАЙ КРАСНОЯРСКИЙ, ГОРОД КРАСНОЯРСК, ПРОСПЕКТ СВОБОДНЫЙ, 79","655619, РЕСПУБЛИКА ХАКАСИЯ, ГОРОД САЯНОГОРСК, ПОСЕЛОК ГОРОДСКОГО ТИПА ЧЕРЕМУШКИ, 46","662544, КРАЙ КРАСНОЯРСКИЙ, ГОРОД ЛЕСОСИБИРСК, УЛИЦА ПОБЕДЫ, 42","665017, РЕСПУБЛИКА ХАКАСИЯ, ГОРОД АБАКАН, УЛИЦА ЩЕТИНКИНА, 27","614990, КРАЙ ПЕРМСКИЙ, Г. Пермь, УЛ. ЛЕНИНА, ЗД. 13А","614532, КРАЙ ПЕРМСКИЙ, РАЙОН ПЕРМСКИЙ, СЕЛО ЛОБАНОВО, УЛИЦА КУЛЬТУРЫ, ДОМ 12","614007, КРАЙ ПЕРМСКИЙ, ГОРОД ПЕРМЬ, УЛИЦА СИБИРСКАЯ, ДОМ 78-А","614013, КРАЙ ПЕРМСКИЙ, ГОРОД ПЕРМЬ, УЛИЦА АКАДЕМИКА КОРОЛЕВА, ДОМ 3","614013, КРАЙ ПЕРМСКИЙ, ГОРОД ПЕРМЬ, УЛИЦА АКАДЕМИКА КОРОЛЕВА, ДОМ 1","614081, КРАЙ ПЕРМСКИЙ, ГОРОД ПЕРМЬ, УЛИЦА ГОЛЕВА, ДОМ 13","344006, ОБЛАСТЬ РОСТОВСКАЯ, ГОРОД РОСТОВ-НА-ДОНУ, УЛИЦА БОЛЬШАЯ САДОВАЯ, ДОМ 105/42","369380, РЕСПУБЛИКА КАРАЧАЕВО-ЧЕРКЕССКАЯ, РАЙОН МАЛОКАРАЧАЕВСКИЙ, СЕЛО УЧКЕКЕН, УЛИЦА ПОДГОРНАЯ, ДОМ 1","385000, РЕСПУБЛИКА АДЫГЕЯ, ГОРОД МАЙКОП, УЛИЦА ГАГАРИНА, ДОМ 143","354068, КРАЙ КРАСНОДАРСКИЙ, ГОРОД СОЧИ, УЛИЦА ЧЕХОВА, ДОМ 48","353461, КРАЙ КРАСНОДАРСКИЙ, ГОРОД ГЕЛЕНДЖИК, УЛИЦА ЗАСТАВНАЯ, ДОМ 10, КОРПУС А","357400, КРАЙ СТАВРОПОЛЬСКИЙ, ГОРОД ЖЕЛЕЗНОВОДСК, УЛИЦА ЛЕНИНА, 56","367013, РЕСПУБЛИКА ДАГЕСТАН, ГОРОД МАХАЧКАЛА, УЛИЦА ЮСУПОВА, ДОМ 51","346900, ОБЛАСТЬ РОСТОВСКАЯ, ГОРОД НОВОШАХТИНСК, УЛИЦА 40 ЛЕТ ОКТЯБРЯ, 2"],["660041","655619","662544","655017","614990","614532","614007","614068","614068","614081","344006","369380","385000","354068","353461","357401","367013","346900"],["край","республика","край","республика","край","край","край","край","край","край","область","республика","республика","край","край","край","республика","область"],["Красноярский","Хакасия","Красноярский","Хакасия","Пермский","Пермский","Пермский","Пермский","Пермский","Пермский","Ростовская","Карачаево-Черкесская","Адыгея","Краснодарский","Краснодарский","Ставропольский","Дагестан","Ростовская"],["Красноярск","Саяногорск","Лесосибирск","Абакан","Пермь",null,"Пермь","Пермь","Пермь","Пермь","Ростов-на-Дону",null,"Майкоп","Сочи","Геленджик","Железноводск","Махачкала","Новошахтинск"],[null,"рабочий поселок",null,null,null,"село",null,null,null,null,null,"село",null,null,null,null,null,null],[null,"Черемушки",null,null,null,"Лобаново",null,null,null,null,null,"Учкекен",null,null,null,null,null,null],["проспект",null,"улица","улица","улица","улица","улица","улица","улица","улица","улица","переулок","улица","улица","улица","улица","улица","улица"],["Свободный",null,"Победы","Щетинкина","Ленина","Культуры","Сибирская","Академика Королева","Академика Королева","Голева","Большая Садовая","Подгорный","Гагарина","Чехова","Заставная","Ленина","Юсупова","40 Лет Октября"],["дом","дом","дом","дом","здание","дом","дом","дом","дом","дом","дом","дом","дом","дом","дом","дом","дом","здание"],["79","46","42","27","13А","12","78А","3","1","13","105/42","1","143","48","10А","56","51","2"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>geoname_id<\/th>\n      <th>lat<\/th>\n      <th>lon<\/th>\n      <th>time<\/th>\n      <th>federal_district<\/th>\n      <th>address_full<\/th>\n      <th>postal_code<\/th>\n      <th>region_type<\/th>\n      <th>region<\/th>\n      <th>city<\/th>\n      <th>settlement_type<\/th>\n      <th>settlement<\/th>\n      <th>street_type<\/th>\n      <th>street<\/th>\n      <th>house_type<\/th>\n      <th>house<\/th>\n      <th>block_type_full<\/th>\n      <th>block<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":true,"scrollX":true,"columnDefs":[{"width":"450px","targets":6}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-3---hierarchy">Table 3 - Hierarchy</h2>
+<p>This is a very important table, as it links the parent organizations not only with its current branches, but also with the predecessors (for convenience, in this document both will be referred as “children accounts”).</p>
+<p>Table 3 does not pretend to be complete for few reasons:</p>
+<ol type="a">
+<li><p>the list includes only the last predecessors of the current organizations, so there is no historical perspective from 2000s or from USSR.</p></li>
+<li><p>some organizations have many branch offices (e.g. hospitals), but information about their hierarchy has little or no value from research assessment perspective. Therefore, for some organizations RIRO does not show the branches. The orgs including the branches are mainly the federal organizations (subdued to the ministries and the federal agencies).</p></li>
+</ol>
+<p>The “child_code” is a code for the children account, and the values in the “relation” column reflect nature of the subordination (it can be a branch or a predecessor).</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t3</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table3_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>full_test</span> <span class='op'>&lt;-</span> <span class='va'>t3</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>code</span> <span class='op'>%in%</span> <span class='va'>test_group</span><span class='op'>$</span><span class='va'>code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>arrange</span><span class='op'>(</span><span class='fu'>desc</span><span class='op'>(</span><span class='va'>code</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>full_test</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>, 
+                           columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-d65fc6d799f50d21bb82" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d65fc6d799f50d21bb82">{"x":{"filter":"none","data":[["z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","z9t2h8","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","m8v2s2","m8v2s2","m8v2s2","m8v2s2","m8v2s2","m8v2s2","m8v2s2","m8v2s2","m8v2s2","m8v2s2"],["p6z5t4","r3x2z9","x5n9x6","y4b7t4","m7z6v2","n8y5z9","p5i7s4","p3i7t4","g5p5x5","b4h9s7","g3r3w6","s5s5b9","n2b4z2","h7v2h7","w8p8t9","s4y4m5","s7w8s6","t4n4s4","m2s2b3","s7h5h8","p4n9m8","x6s2r3","i9r8s5","g3p7v2","p8b2b5","p8h7x7","s7v5y9","s5g2w8","t2x9w6","s7m2r5","n4p6n5","h9m4b9","t6r3w7","t9n7n2","v2b6n8","h2g6p6","r8n4i2","v8p7t7","r9w2z4","b5w6b6","z4r9b8","s6g7r2","z8h2m4","r9b8s7","n8m7g5","n4n4s3","v8y3r9","n5n6h8","s4z5i6","x5p8s5","p9h4g6"],["Филиал","Филиал","Филиал","Филиал","Филиал","Филиал","Филиал","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Филиал","Филиал","Филиал","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Филиал","Филиал","Филиал","Филиал","Филиал","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники","Правопредшественники"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>child_code<\/th>\n      <th>relation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,1,2]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>So, using a list of OGRNs for 3 selected organizations, we extracted from Table 1 18 entities with unique codes (head &amp; branch organizations), further used to retrieve a list of all the predecessors. As a result we get a list of 54 entities with unique code values.</p>
+<p>Let’s look into this list:</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>hierarchy</span> <span class='op'>&lt;-</span> <span class='va'>full_test</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>add_row</span><span class='op'>(</span>code <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>full_test</span><span class='op'>$</span><span class='va'>code</span><span class='op'>)</span>, 
+          child_code <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>full_test</span><span class='op'>$</span><span class='va'>code</span><span class='op'>)</span>,
+          relation <span class='op'>=</span> <span class='st'>"Головная"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>rename</span><span class='op'>(</span>parent_code <span class='op'>=</span> <span class='va'>code</span>, code <span class='op'>=</span> <span class='va'>child_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span>, <span class='va'>relation</span><span class='op'>)</span>
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>count</span><span class='op'>(</span><span class='va'>parent_code</span>, <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>pivot_wider</span><span class='op'>(</span>names_from <span class='op'>=</span> <span class='va'>relation</span>, 
+              values_from <span class='op'>=</span> <span class='va'>n</span>, values_fill <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>select</span><span class='op'>(</span><span class='va'>parent_code</span>, parent_org <span class='op'>=</span> <span class='va'>`Головная`</span>, 
+           branch <span class='op'>=</span> <span class='va'>`Филиал`</span>, predecessors <span class='op'>=</span> <span class='va'>`Правопредшественники`</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, 
+            escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>, 
+  columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, 
+                         targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-1bfc0205c62ae0abc759" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1bfc0205c62ae0abc759">{"x":{"filter":"none","data":[["m8v2s2","t8w7s4","z9t2h8"],[1,1,1],[5,3,7],[5,14,17]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>parent_code<\/th>\n      <th>parent_org<\/th>\n      <th>branch<\/th>\n      <th>predecessors<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,1,2,3]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>One may note that a list of both head and branch organizations can be retrieved from Table 1, so why to use the table 3?</p>
+<p>Fair question, let me show you why the RIRO table 3 should not be ignored.</p>
+<h2 id="table-4---ror">Table 4 - ROR</h2>
+<p>Research Organizations Registry (ROR) is an international project launched in 2019 with an ambitious goal to create a public ORCID-like registry for the research organizations. It inherits a lot from GRID (Global Research Identifier Database) and Wikidata. The ROR organization info can be downloaded as a <a href="https://figshare.com/collections/ROR_Data/4596503">JSON dump</a> or retrieved via <a href="https://github.com/ror-community/ror-api">API</a>.</p>
+<p>Table 4 contains not all the Russian-related records from ROR, but only those matched to the organizations present in RIRO.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t4</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table4_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t4</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, 
+            escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'250px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span>,
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'400px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-193930287af2d336e4f7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-193930287af2d336e4f7">{"x":{"filter":"none","data":[["m8v2s2","s4z5i6","z8h2m4","r9b8s7","t8w7s4","z9t2h8"],["03ymmms77","04e09qg36","05ptgb204","0080yzn09","05fw97k56","01tv9ph92"],["grid.465304.0","grid.466776.2","grid.473900.9","grid.466794.e","grid.412592.9","grid.182798.d"],["Institute of Continuous Media Mechanics","Institute of Ecology and Genetics of Microorganisms","Mining Institute of the Ural Branch of the Russian Academy of Sciences","Institute of Technical Chemistry","Siberian Federal University","Southern Federal University"],["Институт механики сплошных сред",null,"Горный институт Уральского отделения РАН",null,"Сибирский федеральный университет","Южный федеральный университет"],["label:Department of Energy, Engineering, Mechanics and Control Processes|type:Parent|id:https://ror.org/05kknxr83","label:Department of Biological Sciences|type:Parent|id:https://ror.org/038rjvd86","label:Ural Branch of the Russian Academy of Sciences|type:Parent|id:https://ror.org/02s4h3z39","label:Department of Chemistry and Material Sciences|type:Parent|id:https://ror.org/059tqvg48",":",":"],["Perm","Perm","Perm","Perm","Krasnoyarsk","Rostov-on-Don"],["https://www.icmm.ru/en/","http://eng.iegm.ru/","http://www.mi-perm.ru/en/","http://itch.perm.ru/en/","http://www.sfu-kras.ru/en","http://sfedu.ru/international/"],["Federal State Institution of Science Institute of Continuous Media Mechanics, Ural Branch of the Russian Academy of Sciences|Department of Polymer Physics","Federal State Institution of Science Institute of Ecology and Genetics of Microorganisms, Ural Branch of the Russian Academy of Sciences",null,"Federal State Institution of Science Institute of Technical Chemistry, Ural Branch of the Russian Academy of Sciences","Sibirskiĭ federalʹnyĭ universitet","Rostov State University"],["ICMM","IEGM UB RAS","GI UB RAS",null,null,null],["active","active","active","active","active","active"],[null,null,null,null,"http://en.wikipedia.org/wiki/Siberian_Federal_University","http://en.wikipedia.org/wiki/Southern_Federal_University"],["0000 0004 0397 7968",null,null,"0000 0004 0386 1914","0000 0001 0940 9855","0000 0001 2172 8170"],[null,null,null,null,"13066639|6225504","9162116"],[null,null,null,null,"Q2382644","Q2065921"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>ror_id<\/th>\n      <th>grid<\/th>\n      <th>ror_name<\/th>\n      <th>ror_name_rus<\/th>\n      <th>ror_relationships<\/th>\n      <th>ror_city<\/th>\n      <th>ror_links<\/th>\n      <th>ror_aliases<\/th>\n      <th>ror_acronyms<\/th>\n      <th>ror_status<\/th>\n      <th>ror_wikipedia<\/th>\n      <th>ror_isni<\/th>\n      <th>ror_orgref<\/th>\n      <th>ror_wikidata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":true,"scrollX":true,"columnDefs":[{"width":"250px","targets":[3,4,5]},{"width":"400px","targets":8}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>The column “Relationships” comprise the composite values of following structure:</p>
+<p><code>label:xxxx|type:yyyyyy|id:https://ror.org/zzzzz</code>,</p>
+<p>with 3 units (label, type, id) for the relative (according to ROR best judgements) organizations.</p>
+<p>In cases like ours such references can be misleading - according to ROR the research institutes of the Perm Federal Research Center have different parents:</p>
+<ul>
+<li><p>label:Department of Energy, Engineering, Mechanics and Control Processes|type:Parent|id:<a href="https://ror.org/05kknxr83" class="uri">https://ror.org/05kknxr83</a></p></li>
+<li><p>label:Department of Biological Sciences|type:Parent|id:<a href="https://ror.org/038rjvd86" class="uri">https://ror.org/038rjvd86</a></p></li>
+<li><p>label:Ural Branch of the Russian Academy of Sciences|type:Parent|id:<a href="https://ror.org/02s4h3z39" class="uri">https://ror.org/02s4h3z39</a></p></li>
+<li><p>label:Department of Chemistry and Material Sciences|type:Parent|id:<a href="https://ror.org/059tqvg48" class="uri">https://ror.org/059tqvg48</a></p></li>
+</ul>
+<p>So for a single organization ROR shows 4 accounts subordinating to 4 different RAS structures (which is a total confusion, of course).</p>
+<p>The truth is that the found 4 research institutes of the Perm Federal Research Center <strong>ceased to exist as individual legal entities few years ago</strong>, they were acquired by the newly formed federal centre and are now its branches.</p>
+<p>That’s the value of Table 3 in RIRO - it helps to gather the related identifiers and qualify them as corresponding to a branch or a predecessor.</p>
+<h2 id="table-5---wikidata">Table 5 - Wikidata</h2>
+<p>WikiData is a public repository of structured data originating from multiple sources. Some sources are more or less consistent (like CrossRef or ISSN), but there’s also a lot of Wikidata records that are created and modified by people. As a result, even though Wikidata offers a pre-defined templates for the profiles of universities and research organizations, many profiles have unpopulated fields.</p>
+<p>The table 5 comprises just a part of fields present in the Wikidata organization items and it lists only those Russian research organizations that we matched against the RIRO organizations.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t5</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table5_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t5</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span>, <span class='op'>-</span><span class='va'>wd_item</span><span class='op'>)</span> <span class='op'>%&gt;%</span>  
+  <span class='fu'>mutate_at</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"wikipedia_eng"</span>, <span class='st'>"wikipedia_rus"</span>, <span class='st'>"wd_altlabel_eng"</span>, <span class='st'>"wd_altlabel_rus"</span><span class='op'>)</span>,
+            <span class='op'>~</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>.x</span><span class='op'>)</span>,<span class='va'>.x</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substr</a></span><span class='op'>(</span><span class='va'>.x</span>,<span class='fl'>1</span>,<span class='fl'>40</span><span class='op'>)</span>,<span class='st'>"..."</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'250px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>,
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'150px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6</span><span class='op'>:</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-6c4096bccaf4ac6c22f6" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6c4096bccaf4ac6c22f6">{"x":{"filter":"none","data":[["m8v2s2","s4z5i6","z8h2m4","r9b8s7","n8m7g5","t8w7s4","t2x9w6","p8h7x7","z9t2h8","n2b4z2","i9r8s5","i9r8s5"],["Q46815702","Q30263813","Q30267208","Q30176663","Q4201599","Q2382644","Q4239246","Q4251632","Q2065921","Q4398493","Q4449585","Q4449588"],["Perm Federal Research Centre","Institute of Ecology and Genetics of Microorganisms","Mining Institute","Institute of Technical Chemistry","Institute of Continuous Media Mechanics","Siberian Federal University","Krasnoyarsk State Technical University","Lesosibirsk Pedagogical Institute","Southern Federal University","Rostov State Pedagogical University","Taganrog Radioengineering Institute","Taganrog Technological Institute of Southern Federal University"],["Пермский федеральный исследовательский центр","Институт экологии и генетики микроорганизмов УрО РАН","Горный институт Уральского отделения РАН","Институт технической химии","Институт механики сплошных сред УрО РАН","Сибирский федеральный университет","Красноярский государственный технический университет","Лесосибирский педагогический институт","Южный федеральный университет","Ростовский государственный педагогический университет","Таганрогский радиотехнический институт","Таганрогский технологический институт ЮФУ"],["Perm Federal Research Center...","Federal State Institution of Science Ins...","GI UB RAS|Mining Institute of the Ural B...","Federal State Institution of Science Ins...","ICMM|Department of Polymer Physics|Feder...","SibFU|Sibirskiĭ federalʹnyĭ universitet...",null,null,"Rostov State University|South Federal Un...",null,null,null],["ПФНЦ|ПФИЦ|ПНЦ...","ИЭГМ УрО РАН|ИЭГМ...",null,"ИТХ УрО РАН|Институт технической химии У...","Институт механики сплошных сред|ИМСС УрО...","Федеральный Сибирский университет|СФУ|Си...","Красноярский политехнический институт|Кр...",null,"ЮФУ...","Ростовский-на-Дону педагогический универ...","ТРТИ...","ТТИ ЮФУ|Таганрогский технологический инс..."],["http://www.permsc.ru/","http://eng.iegm.ru/","http://www.mi-perm.ru/en/","http://www.itch.perm.ru","http://www.icmm.ru","http://www.sfu-kras.ru/en/",null,"http://lpi.sfu-kras.ru","http://www.sfedu.ru","http://pi.sfedu.ru",null,null],["permsc.ru","eng.iegm.ru","mi-perm.ru","itch.perm.ru","icmm.ru","sfu-kras.ru",null,"lpi.sfu-kras.ru","sfedu.ru","pi.sfedu.ru",null,null],[null,null,null,null,null,"https://en.wikipedia.org/wiki/Siberian_F...",null,null,"https://en.wikipedia.org/wiki/Southern_F...",null,null,null],[null,null,null,null,null,"https://ru.wikipedia.org/wiki/%D0%A1%D0%...","https://ru.wikipedia.org/wiki/%D0%9A%D1%...","https://ru.wikipedia.org/wiki/%D0%9B%D0%...","https://ru.wikipedia.org/wiki/%D0%AE%D0%...","https://ru.wikipedia.org/wiki/%D0%A0%D0%...","https://ru.wikipedia.org/wiki/%D0%A2%D0%...","https://ru.wikipedia.org/wiki/%D0%A2%D0%..."],[null,null,null,null,null,null,null,null,null,null,null,null],[null,"grid.466776.2","grid.473900.9","grid.466794.e","grid.465304.0","grid.412592.9",null,null,"grid.182798.d",null,null,null],[null,null,null,null,null,"/m/02z56pl",null,null,"/m/027zt0m",null,null,null],[null,"04e09qg36","05ptgb204","0080yzn09","03ymmms77","05fw97k56",null,null,"01tv9ph92",null,null,null],[null,null,null,null,null,"4853710",null,null,"137534880",null,null,null],[null,null,null,null,null,"501100011585",null,null,null,null,null,null],[null,null,null,null,"10.7242",null,null,null,"10.18522",null,null,null],[null,null,"129302320","299447873",null,"125189294","4170154260344724e6",null,"138773509",null,null,null],[null,null,null,"0000 0004 0386 1914","0000 0004 0397 7968","0000 0001 0940 9855",null,null,"0000 0001 2172 8170",null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,"siberian-federal-university",null,null,"southern-federal-university",null,null,null],[null,null,null,null,null,"siberian-federal-university",null,null,null,null,null,null],[null,null,null,null,null,"siberian-federal-university-sibfu",null,null,"southern-federal-university",null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,"SibFULive",null,null,"sfedu_official","sfedu_official",null,null],[null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,"2248366826",null,null,"1071208495","1071208495",null,null],[null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>wikidata<\/th>\n      <th>wd_orgname_eng<\/th>\n      <th>wd_orgname_rus<\/th>\n      <th>wd_altlabel_eng<\/th>\n      <th>wd_altlabel_rus<\/th>\n      <th>wd_web_site<\/th>\n      <th>wd_domain<\/th>\n      <th>wikipedia_eng<\/th>\n      <th>wikipedia_rus<\/th>\n      <th>wd_elibrary<\/th>\n      <th>wd_grid<\/th>\n      <th>wd_google<\/th>\n      <th>wd_ror<\/th>\n      <th>wd_mag<\/th>\n      <th>wd_cr_funder<\/th>\n      <th>wd_doi_pref<\/th>\n      <th>wd_viaf<\/th>\n      <th>wd_isni<\/th>\n      <th>wd_ringgold<\/th>\n      <th>wd_arwu<\/th>\n      <th>wd_the<\/th>\n      <th>wd_umultirank<\/th>\n      <th>wd_qs<\/th>\n      <th>wd_ria<\/th>\n      <th>wd_twitter<\/th>\n      <th>wd_facebook<\/th>\n      <th>wd_twitter_id<\/th>\n      <th>wd_youtube<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":true,"scrollX":true,"columnDefs":[{"width":"250px","targets":[2,3,4]},{"width":"150px","targets":[6,7,8,9]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-6---scopus">Table 6 - Scopus</h2>
+<p>Scopus is a (one of leading) citation index accumulating the metadata from 20k+ journal titles, selected conference sources, and some academic book titles. Table 6 lists the Scopus affiliation profiles matched to the organizations in RIRO, and also a number of publications under Scopus affiliation profile (on a data of request, April 2021).</p>
+<p>Over 1000 Russian research organizations (and universities) have an access to Scopus under the state-funded centralized subscription, and can use the matched IDs via the online UI or the <a href="https://dev.elsevier.com/scopus.html">API-service</a>. The latter has few wrappers for <a href="https://pybliometrics.readthedocs.io/en/stable/">python</a> and <a href="https://github.com/muschellij2/rscopus">R</a> that make working with API more comfortable.</p>
+<p>Please note that matching the affiliation profiles to RIRO organizations is based on the affiliation name and city. It does not guarantee that all the publications in the profile are assigned to it correctly. More details on how to edit the affiliation profiles in Scopus can be found on <a href="https://service.elsevier.com/app/answers/detail/a_id/25554/supporthub/scopus/">Elsevier web site</a>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t6</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table6_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t6</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>,
+              <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'350px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-d5d28f44f69c6fb89629" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d5d28f44f69c6fb89629">{"x":{"filter":"none","data":[["m8v2s2","m8v2s2","z8h2m4","r9b8s7","n8m7g5","n4n4s3","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","t8w7s4","p8h7x7","z9t2h8","z9t2h8"],["60109737","122995940","60109738","60109739","60026928","60109740","60075346","60107995","60108004","60108006","60107997","60107996","60108003","60108008","60108009","60107990","60107994","60107991","60108002","60108005","60108007","60108000","60107998","122836154","122836616","122272402","122981495","122427307","60107988","60025383","122203077"],["Perm Federal Research Center, Ural Branch, Russian Academy of Sciences","Perm Federal Research Center of Ural Branch of Russian Academy of Science","Mining Institute of the Ural Branch of the Russian Academy of Sciences","Institute of Technical Chemistry of Ural Branch of the RAS","Institute of Continuous Media Mechanics of the Ural Branch of Russian Academy of Science","Institute of Ecology and Genetics of Microorganisms, Ural Branch of the Russian Academy of Sciences","Siberian Federal University","Siberian Federal University, Institute of Engineering Physics and Radioelectronics","Siberian Federal University, Institute of Nonferrous Metals and Materials","Siberian Federal University, Polytechnic Institute","Siberian Federal University, Institute of Mathematics and Informatics fundamental","Siberian Federal University, Institute of Space and Information Technologies","Siberian Federal University, School of Fundamental Biology and Biotechnology","Siberian Federal University, Law Institute","Siberian Federal University, Institute of Ecology and Geography (IEiG)","Siberian Federal University, Military Engineering Institute","Siberian Federal University, Institute of Mining, Geology and Geotechnology","Siberian Federal University, Institute for the Humanities","Siberian Federal University, School of Philology and Language Communication","Siberian Federal University, Institute of Economics, Management and Environmental","Siberian Federal University, Commerce and Economic Institute","Siberian Federal University, Institute of management of business processes and the economy","Siberian Federal University, School of Petroleum and Gas Engineering","FSAEI HE Seberian Federal University","Siberian Federail University","Siberian Federal University82 Pr. Svobodny","Siberian FederalUniversity","Sierian Federal University","Siberian Federal University, Lesosibirsk Pedagogical Institute","Southern Federal University",null],["Perm Federal Research Center","Perm Federal Research Center Of Ural Branch Of Russian Academy Of Science","Mining Institute Of The Ural Branch Of The Russian Academy Of Sciences","Russian Academy Of Sciences","Institute Of Continuous Media Mechanics","Russian Academy Of Sciences","Siberian Federal University","Siberian Federal University","Siberian Federal University","Krasnoyarsk Polytechnic Institute","Institute Of Mathematics And Computer Science","Institute Of Space And Information Technologies","Institute Of Fundamental Biology And Biotechnology","Siberian Federal University","Institute Of Ecology And Geography","Siberian Federal University","Siberian Federal University","Institute Of Humanities","School Of Philology And Language Communication","Siberian Federal University","Siberian Federal University","Siberian Federal University","Siberian Federal University","Fsaei He Seberian Federal University","Siberian Federail University","Siberian Federal University82 Pr. Svobodny","Siberian Federaluniversity","Sierian Federal University","Lesosibirsk Pedagogical Institute","Southern Federal University",null],["Perm",null,"Perm","Perm","Perm","Perm","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk","Krasnoyarsk",null,"Krasnoyarsk","Krasnoyarsk","Rostov-on-Don",null],["Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation","Russian Federation",null],["199","1","396","1076","2077","667","9051","314","314","191","184","145","113","64","48","32","23","17","16","10","8","6","3","1","1","1","1","1","7","16936",null]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>scopus_id<\/th>\n      <th>scopus_affil_name<\/th>\n      <th>scopus_affil_name_variants<\/th>\n      <th>scopus_affil_city<\/th>\n      <th>scopus_affil_country<\/th>\n      <th>scopus_affil_pubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":true,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,6]},{"width":"350px","targets":[2,3]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-7---microsoft-academic">Table 7 - Microsoft Academic</h2>
+<p><a href="https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/">Microsoft Academic Graph</a> (MAG) is a database created based on the information extracted with Bing-parsers from the publisher web sites and PDF files <a href="https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction">details</a>). This approach is differen from the one utilized by Web of Science and Scopus that receive a large part of information for indexation directly from the publishers.</p>
+<p>MAG is also a source of information for many novel solutions like <a href="https://www.lens.org/">Lens</a>, <a href="https://www.semanticscholar.org/">Semantic Scholar</a>, <a href="https://www.microsoft.com/en-us/research/project/open-academic-graph/">Open Academic Graph</a>, <a href="https://unsub.org/">Unsub</a>.</p>
+<p>Even though the last news about MAG <a href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/">shocked us too</a>, we decided to include the MAG Organization IDs into RIRO. Few international companies committed to launching a new tool that may substitute MAG:</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+ANNOUNCING: We’re building a replacement for Microsoft Academic Graph. <a href="https://t.co/GXelkpt6Zc">https://t.co/GXelkpt6Zc</a>
+</p>
+— Our Research (<span class="citation" data-cites="our_research">@our_research</span>) <a href="https://twitter.com/our_research/status/1391144816549892097?ref_src=twsrc%5Etfw">May 8, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+Thanks to <a href="https://twitter.com/MSFTResearch?ref_src=twsrc%5Etfw"><span class="citation" data-cites="MSFTResearch">@MSFTResearch</span></a> for providing the Microsoft Academic Graph (MAG). We’ve been working with MSR and MAG since 2018, and we’ve been collaborating on this transition for some time. 1/3<a href="https://t.co/7aHTLio8uK">https://t.co/7aHTLio8uK</a>
+</p>
+— Semantic Scholar (<span class="citation" data-cites="SemanticScholar">@SemanticScholar</span>) <a href="https://twitter.com/SemanticScholar/status/1392265402302963712?ref_src=twsrc%5Etfw">May 11, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Table 7 lists just the MAG organization IDs and names agains the RIRO codes.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t7</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table7_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t7</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'450px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-7e17283937e6dbd60250" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7e17283937e6dbd60250">{"x":{"filter":"none","data":[["t8w7s4","t8w7s4","z9t2h8"],["4853710","153414339","137534880"],["siberian federal university","krasnoyarsk state university","southern federal university"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>mag_id<\/th>\n      <th>mag_orgname<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,1]},{"width":"450px","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-8---incites">Table 8 - InCites</h2>
+<p>InCites is an analytical solution build over Web of Science Core Collection. It allows to export the records, so the matched names can be used for further analysis.</p>
+<p>The table 8 lists the official organization names in InCite and Web of Science Core Collection against the RIRO codes.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t8</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table8_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>  
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t8</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'450px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-be885e46fe77429cb286" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be885e46fe77429cb286">{"x":{"filter":"none","data":[["m8v2s2","s4z5i6","r9b8s7","n8m7g5","t8w7s4","z9t2h8"],["Perm Federal Research Center, Ural Branch, RAS","Institute of Ecology & Genetics of Microorganisms, Ural Branch, RAS","Institute of Technical Chemistry of the Ural Branch, RAS","Institute of Continuous Media Mechanics of the Ural Branch, RAS","Siberian Federal University","Southern Federal University"],["Perm Federal Research Center Ural Branch Ras","Institute Of Ecology Genetics Of Microorganisms Ural Branch Ras","Institute Of Technical Chemistry Of The Ural Branch Ras","Institute Of Continuous Media Mechanics Of The Ural Branch Ras","Siberian Federal University","Southern Federal University"],["611","70","104","351","1882","2244"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>incites_orgname<\/th>\n      <th>wos_orgname<\/th>\n      <th>wos_pubs_2019_21<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,3]},{"width":"450px","targets":[1,2]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-9---scival">Table 9 - SciVal</h2>
+<p>SciVal is an analytical tool build over Scopus. Some Russian organizations have an access to SciVal API and could use the IDs matched against the RIRO codes in the table 9.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t9</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table9_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t9</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'450px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-4fa7da7ea126d1b41ad4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4fa7da7ea126d1b41ad4">{"x":{"filter":"none","data":[["m8v2s2","n8m7g5","t8w7s4","z9t2h8"],["719914","719690","700790","331015"],["Perm Federal Research Center","Institute of Continuous Media Mechanics","Siberian Federal University","Southern Federal University"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>scival_id<\/th>\n      <th>scival_institution_name<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,1]},{"width":"450px","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-10---russian-universities-assessment-system-by-the-ministry-of-science-higher-education">Table 10 - Russian Universities Assessment System (by the Ministry of Science &amp; Higher Education)</h2>
+<p>The system gathers the university statistical reports from all Russian higher education institutions (except some schools under the Ministries of Defence, etc). The reports contain a lot of useful information - from financial to enrollment data.</p>
+<p>Table 10 lists the IDs that corresponds to the university’s web page on the portal, matched to the RIRO codes.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t10</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table10_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t10</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, 
+                                     targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-8cdb50a9132c84ca5ce5" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8cdb50a9132c84ca5ce5">{"x":{"filter":"none","data":[["t8w7s4","p8b2b5","p8h7x7","s7v5y9","z9t2h8","y4b7t4","p5i7s4"],["1507","10003240","10001067","10001068","337","10001364","10001361"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>monitoring_id<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,1]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table-11---web-of-science">Table 11 - Web of Science</h2>
+<p>Web of Science is by far the world’s oldest and most prominent citation index. At this moment Web of Science does not provide the organization IDs that could be used for search or data retrieval, but the search results have the orgaization names. The table 11 lists almost 4000 such names matched to the organizations in RIRO. This is not a complete list of known affiliation names for the Russian research organizations, but we hope to adjust this table in future releases of RIRO.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t11</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table11_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t11</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, 
+            escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'450px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-755c6e1140470f3a5282" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-755c6e1140470f3a5282">{"x":{"filter":"none","data":[["m8v2s2","m8v2s2","m8v2s2","m8v2s2","s4z5i6","z8h2m4","r9b8s7","n8m7g5","n8m7g5","t8w7s4","p8h7x7","z9t2h8","z9t2h8","z9t2h8","z9t2h8","y4b7t4","n8y5z9"],["Inst Continuous Media Mech Acad","Inst Continuous Media Mech Ue Ms","Perm Fed Sci Ctr","Perm Federal Research Center Ural Branch Ras","Institute Of Ecology Genetics Of Microorganisms Ural Branch Ras","Mining Institute Of The Ural Branch Ras","Institute Of Technical Chemistry Of The Ural Branch Ras","Inst Continous Media Mech Ub Ras","Institute Of Continuous Media Mechanics Of The Ural Branch Ras","Siberian Federal University","Lesosibirsk Pedag Inst Branch Sfu","Aesthet Southern Fed Univ","Southern Fed Univ Sfu","Southern Fed Univ Sladkova","Southern Federal University","Southern Fed Univ Gelendzhik","Southern Fed Univ Makhachkala"],["NO","NO","NO","YES","YES","n\\a","YES","NO","YES","YES","n\\a","NO","NO","NO","YES","n\\a","n\\a"],["Perm Federal Research Center Ural Branch Ras","Perm Federal Research Center Ural Branch Ras","Perm Federal Research Center Ural Branch Ras","Perm Federal Research Center Ural Branch Ras","Institute Of Ecology Genetics Of Microorganisms Ural Branch Ras","n\\a","Institute Of Technical Chemistry Of The Ural Branch Ras","Institute Of Continuous Media Mechanics Of The Ural Branch Ras","Institute Of Continuous Media Mechanics Of The Ural Branch Ras","Siberian Federal University","n\\a","Southern Federal University","Southern Federal University","Southern Federal University","Southern Federal University","n\\a","n\\a"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>wos_name_variant<\/th>\n      <th>wos_main<\/th>\n      <th>wos_incites_main_name<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":0},{"width":"450px","targets":[1,3]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="table12">Table 12. eLIRBARY.ru</h2>
+<p><a href="https://elibrary.ru/defaultx.asp?">eLIBRARY.ru</a> is the largest Russian aggregator of the scholarly contents. In the last years the company actively invests into the online services, including API. The Org ID is used in the URLs of the organization profiles (e.g. <a href="https://www.elibrary.ru/org_about.asp?orgsid=17548" class="uri">https://www.elibrary.ru/org_about.asp?orgsid=17548</a>) and by some API.</p>
+<p>Table 12 lists the organization ids of 1827 largest Russian research organizations. We cooperate with the proprietor to extend the list in the next RIRO releases.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>t12</span> <span class='op'>&lt;-</span> <span class='va'>riro_tables</span> <span class='op'>%&gt;%</span> <span class='va'>.</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"table12_"</span>,<span class='va'>.</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>read_csv</span><span class='op'>(</span>col_types <span class='op'>=</span> <span class='fu'>cols</span><span class='op'>(</span>.default <span class='op'>=</span> <span class='fu'>col_character</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> 
+
+<span class='va'>hierarchy</span> <span class='op'>%&gt;%</span> <span class='fu'>inner_join</span><span class='op'>(</span><span class='va'>t12</span>, by <span class='op'>=</span> <span class='st'>"code"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>parent_code</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='op'>-</span><span class='va'>parent_code</span>, <span class='op'>-</span> <span class='va'>relation</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/DT/man/datatable.html'>datatable</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='cn'>FALSE</span>, filter <span class='op'>=</span> <span class='st'>"none"</span>, 
+            escape <span class='op'>=</span> <span class='cn'>FALSE</span>, class <span class='op'>=</span> <span class='st'>"row-border"</span>, 
+            options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>autoWidth <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              columnDefs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>className <span class='op'>=</span> <span class='st'>'dt-center'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>'450px'</span>, targets <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div id="htmlwidget-ef801facbd87da3c1e4e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ef801facbd87da3c1e4e">{"x":{"filter":"none","data":[["m8v2s2","t8w7s4","z9t2h8"],["14797","4007","322"],["Пермский федеральный исследовательский центр УрО РАН","Сибирский федеральный университет","Южный федеральный университет"],["Пермь","Красноярск","Ростов-на-Дону"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>code<\/th>\n      <th>elibrary_org_id<\/th>\n      <th>elibrary_org_name<\/th>\n      <th>elibrary_city<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"Brftip","deferRender":true,"ordering":true,"autoWidth":false,"scrollX":true,"columnDefs":[{"className":"dt-center","targets":[0,1]},{"width":"450px","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="all-ids-for-3-organizations">All IDs for 3 organizations</h2>
+<p>An illustration below shows the identifiers (ROR, GRID, Scopus Affiliation ID, InCites ID, MAG, Wikidata) matched to 3 organizations selected as an example. Some IDs correspond to the head organizations, the others either to the branches or to the predecessors.</p>
+<p>The identifiers are placed along X-axis, organized in three sections (by organization). The RIRO entities are place along Y-axis, the existing organization are shown as squares (the head organizations are also marked with a special sign), the predecessors as circles.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>img.dir</span>, <span class='st'>"chart_examples_v1.1_eng.png"</span><span class='op'>)</span>
+<span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='va'>filename</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="images/chart_examples_v1.1_eng.png" width="1417" /></p>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>For RIRO v.1.1 we have a <a href="https://docs.google.com/forms/d/e/1FAIpQLScK-USC1BdyaJFudLHHy1Qo2T6ZFnVDLoknRixCfiasJwMbrw/viewform">google form (in Russian)</a> with the following scenarios of the change requests:</p>
+<ul>
+<li>update the official organization data</li>
+<li>add new organization absent in RIRO</li>
+<li>change a link between the identifier &amp; organization in tables 4-12 (ROR, GRID, Wikidata, etc)</li>
+<li>add new links, missing in the tables 4-12</li>
+<li>suggest a new data source &amp; identifiers).</li>
+</ul>
+<p>We do hope that feedback will help us to make RIRO a more valuable tool.</p>
+<h3 id="acknowledgments" class="appendix">Acknowledgments</h3>
+<p>Allaire J, Xie Y, McPherson J, Luraschi J, Ushey K, Atkins A, Wickham H, Cheng J, Chang W, Iannone R (2021). <em>rmarkdown: Dynamic Documents for R</em>. R package version 2.7, &lt;URL: <a href="https://github.com/rstudio/rmarkdown" class="uri">https://github.com/rstudio/rmarkdown</a>&gt;.</p>
+<p>Blondel E (2021). <em>zen4R: Interface to ‘Zenodo’ REST API</em>. R package version 0.4-3, &lt;URL: <a href="https://github.com/eblondel/zen4R" class="uri">https://github.com/eblondel/zen4R</a>&gt;.</p>
+<p>Chang, W (2014). <em>extrafont: Tools for using fonts</em>. R package version 0.17, &lt;URL: <a href="https://CRAN.R-project.org/package=extrafont" class="uri">https://CRAN.R-project.org/package=extrafont</a>&gt;.</p>
+<p>Henry L, Wickham H (2020). <em>purrr: Functional Programming Tools</em>. R package version 0.3.4, &lt;URL: <a href="https://CRAN.R-project.org/package=purrr" class="uri">https://CRAN.R-project.org/package=purrr</a>&gt;.</p>
+<p>Krassowski M (2020). “ComplexUpset.” doi: 10.5281/zenodo.3700590 (URL: <a href="https://doi.org/10.5281/zenodo.3700590" class="uri">https://doi.org/10.5281/zenodo.3700590</a>), &lt;URL: <a href="https://doi.org/10.5281/zenodo.3700590" class="uri">https://doi.org/10.5281/zenodo.3700590</a>&gt;.</p>
+<p>Lex A, Gehlenborg N, Strobelt H, Vuillemot R, Pfister H (2014). “UpSet: Visualization of Intersecting Sets,.” <em>IEEE Transactions on Visualization and Computer Graphics</em>, <em>20</em>(12), 1983–1992. doi: 10.1109/TVCG.2014.2346248 (URL: <a href="https://doi.org/10.1109/TVCG.2014.2346248" class="uri">https://doi.org/10.1109/TVCG.2014.2346248</a>), &lt;URL: <a href="https://doi.org/10.1109/TVCG.2014.2346248" class="uri">https://doi.org/10.1109/TVCG.2014.2346248</a>&gt;.</p>
+<p>Wickham H (2020). <em>tidyr: Tidy Messy Data</em>. R package version 1.1.2, &lt;URL: <a href="https://CRAN.R-project.org/package=tidyr" class="uri">https://CRAN.R-project.org/package=tidyr</a>&gt;.</p>
+<p>Wickham H (2016). <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. ISBN 978-3-319-24277-4, &lt;URL: <a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a>&gt;.</p>
+<p>Wickham H (2019). <em>stringr: Simple, Consistent Wrappers for Common String Operations</em>. R package version 1.4.0, &lt;URL: <a href="https://CRAN.R-project.org/package=stringr" class="uri">https://CRAN.R-project.org/package=stringr</a>&gt;.</p>
+<p>Wickham H, Francois R, Henry L, Muller K (2021). <em>dplyr: A Grammar of Data Manipulation</em>. R package version 1.0.3, &lt;URL: <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>&gt;.</p>
+<p>Wickham H, Hester J (2020). <em>readr: Read Rectangular Text Data</em>. R package version 1.4.0, &lt;URL: <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>&gt;.</p>
+<p>Wickham H, Seidel D (2020). <em>scales: Scale Functions for Visualization</em>. R package version 1.1.1, &lt;URL: <a href="https://CRAN.R-project.org/package=scales" class="uri">https://CRAN.R-project.org/package=scales</a>&gt;.</p>
+<p>Xie Y (2020). <em>knitr: A General-Purpose Package for Dynamic Report Generation in R</em>. R package version 1.30, &lt;URL: <a href="https://yihui.org/knitr/" class="uri">https://yihui.org/knitr/</a>&gt;.</p>
+<p>Xie Y (2015). <em>Dynamic Documents with R and knitr</em>, 2nd edition. Chapman and Hall/CRC, Boca Raton, Florida. ISBN 978-1498716963, &lt;URL: <a href="https://yihui.org/knitr/" class="uri">https://yihui.org/knitr/</a>&gt;.</p>
+<p>Xie Y (2014). “knitr: A Comprehensive Tool for Reproducible Research in R.” In Stodden V, Leisch F, Peng RD (eds.), <em>Implementing Reproducible Computational Research</em>. Chapman and Hall/CRC. ISBN 978-1466561595, &lt;URL: <a href="http://www.crcpress.com/product/isbn/9781466561595" class="uri">http://www.crcpress.com/product/isbn/9781466561595</a>&gt;.</p>
+<p>Xie Y, Allaire J, Grolemund G (2018). <em>R Markdown: The Definitive Guide</em>. Chapman and Hall/CRC, Boca Raton, Florida. ISBN 9781138359338, &lt;URL: <a href="https://bookdown.org/yihui/rmarkdown" class="uri">https://bookdown.org/yihui/rmarkdown</a>&gt;.</p>
+<p>Xie Y, Cheng J, Tan X (2021). <em>DT: A Wrapper of the JavaScript Library ‘DataTables’</em>. R package version 0.17, &lt;URL: <a href="https://CRAN.R-project.org/package=DT" class="uri">https://CRAN.R-project.org/package=DT</a>&gt;.</p>
+<p>Xie Y, Dervieux C, Riederer E (2020). <em>R Markdown Cookbook</em>. Chapman and Hall/CRC, Boca Raton, Florida. ISBN 9780367563837, &lt;URL: <a href="https://bookdown.org/yihui/rmarkdown-cookbook" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook</a>&gt;.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

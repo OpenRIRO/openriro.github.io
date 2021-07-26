@@ -1,0 +1,66 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "О проекте OpenRIRO / About Open RIRO",
+      "description": "Краткая информация о проекте / A brief information about the RIRO project.  \n",
+      "author": [
+        {
+          "name": {},
+          "url": "https://www.linkedin.com/in/lutaya/"
+        },
+        {
+          "name": {},
+          "url": {}
+        }
+      ],
+      "date": "05-24-2021",
+      "contents": "\r\n\r\nContents\r\nЧто такое RIRO?\r\nЗачем всё это?\r\nWhat is RIRO?\r\nWhy do we need RIRO?\r\n\r\nЧто такое RIRO?\r\nRIRO - это проект Russian Index of the Research Organizations, запущенный в мае 2021 года. RIRO v.1.0 - представляет из себя набор таблиц, которые связывают российские юридические лица, задействованные в научных исследованиях, с идентификаторами и профилями российских и международных информационных систем:\r\nWikidata\r\nROR\r\nGRID\r\nMicrosoft Academic\r\nScopus\r\nSciVal\r\nWeb of Science\r\nInCites\r\nМониторинг вузов Минобрнауки\r\neLIBRARY.RU.\r\nВсе версии датасета будут доступны на Zenodo: https://zenodo.org/communities/riro/.\r\nПроцитировать датасет (без указания версии):\r\nSterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290\r\nФрагменты кода и примеры использования будут собираться на странице Examples.\r\nЗачем всё это?\r\nОсновная цель создания RIRO – открыть и связать профили и идентификаторы российских научных организаций в информационных системах. Объединение и соотнесение данных из этих систем необходимо как для изучения, так и для управления сетью организаций на современном этапе развития науки и данных о ней.\r\nРабота по созданию RIRO заключается далеко не только в механическом соединении источников. У каждого из существующих идентификаторов свои “детские болезни”: одни стараются быстро реагировать на переименования и реорганизации, но полностью переписывают историю со всеми правопредшественниками; другие, напротив, привязываются к “славным” именам мифических героев, которые уже не актуальны. В результате одна организация в различных сервисах может быть представлена совершенно различными наборами идентификаторов, что уменьшает и без этого ограниченную применимость наукометрических инструментов для анализа российской науки.\r\nОпубликованный датасет нацелен на решение следующих задач:\r\nпредоставить в распоряжение исследователей наборы идентификаторов, учитывающих особенности структуры и истории трансформации российских научных организаций.\r\nотразить актуальность и полноту сведений о российских научных организациях в проприетарных и открытых сервисах.\r\nпривлечь внимание исследователей к возможностях новых информационно-аналитических сервисов.\r\nвыбранный подход – публикация только идентификаторов и профилей, но не самих показателей – позволяет открыто объединить разнообразные источники данных из коммерческих и некоммерческих, российских и иностранных систем.\r\nWhat is RIRO?\r\nRIRO, as the article’s title suggests, is a project launched in May 2021 and devoted to the Russian organizations doing research. What title does not tell is that RIRO was designed as a public, open, and autonomous project, where\r\npublic tells that anyone can use it (free as in speech);\r\nopen suggests that anyone can contribute to it (no strings attached);\r\nautonomous stresses the fact that the project is self-governed (free as a bird).\r\nIn its current form RIRO v.1.0 is a set of tables linking the organization identifiers and profiles from various international registries (see a list below) to the Russian legal entities.\r\nWikidata\r\nROR\r\nGRID\r\nMicrosoft Academic\r\nScopus\r\nSciVal\r\nWeb of Science\r\nInCites\r\nUniversity Monitoring System by the Ministry of Science & Higher Education.\r\neLIBRARY.RU.\r\nAll files are available at Zenodo: https://zenodo.org/communities/riro/.\r\nTo cite RIRO dataset (without version):\r\nSterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290\r\nThe code and examples of use will be shared via Examples page.\r\nWhy do we need RIRO?\r\nThe project’s main purpose is to create and link the profiles (PID) corresponding to the Russian research organizations in the various information systems. One may argue that in those identifiers are already assigned to some organizaions. It looks so, but each register of identifiers has its own handicaps - some are trying to keep the most updated orgnames and rename the accounts, wiping out old names and connections; the others have more conservative record update policy and provide a lot of obsolete names; most do not follow the Russian mergers in science; and none is great in covering the small organizations (which is a terra incognita for any citation index). As a result, the identifiers provided by the international services suffer from a patchy coverage and have a limited value for the research assessment and scientometric analysis.\r\nWith the RIRO we aim to:\r\ncreate, update, and share a public dataset of the organization identifiers that reflects not only their current statuses, but also their recent (at least) transformations;\r\nasssess how complete is a representation of the Russian organizations in the international registries;\r\nattract the researh community’s attention to the new information services and its features.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-24T14:40:04+03:00"
+    },
+    {
+      "path": "Examples.html",
+      "title": "Примеры использования",
+      "description": "На этой странице со временем появятся ссылки на исследования, в которых использовались таблицы индекса RIRO, или готовые фрагменты кода, который облегчает их использование.\n",
+      "author": [
+        {
+          "name": {},
+          "url": "https://www.linkedin.com/in/lutaya/"
+        },
+        {
+          "name": {},
+          "url": {}
+        }
+      ],
+      "date": "07-25-2021",
+      "contents": "\r\nWoS-Fractional-Counting-Script - скрипт на Python для фракционного подсчёта вклада организаций по данным Web of Science\r\nUniversity-fractional-counting-with-Pybliometrics - скрипт на Python для фракционного подсчёта вклада организаций по данным Scopus\r\nСкачиваем датасет RIRO с Zenodo - способы скачивания последней версии датасета RIRO с примера на R\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-24T14:34:26+03:00"
+    },
+    {
+      "path": "index.html",
+      "title": "OpenRIRO",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-24T14:31:25+03:00"
+    },
+    {
+      "path": "sources.html",
+      "title": "Источники сведений для RIRO",
+      "description": "Описание основных интерфейсов для работы с базами данных, позволяющих использовать идентификаторы включенные в RIRO.\n",
+      "author": [
+        {
+          "name": {},
+          "url": "https://www.linkedin.com/in/lutaya/"
+        },
+        {
+          "name": {},
+          "url": {}
+        }
+      ],
+      "date": "07-25-2021",
+      "contents": "\r\n\r\nContents\r\nScopus\r\nSciVal\r\nWikidata\r\nROR\r\nMicrosoft Academic\r\nWeb of Science / InCites\r\neLIBRARY\r\nApiCrafter (https://apicrafter.ru/)\r\n\r\nScopus\r\nScopus позволяет выполнять поиск по базе данных с использованием идентификаторов организаций.\r\nвеб-интерфейс (Advanced Search)\r\nИдентификаторы организаций помещаются в оператор AF-ID(). Пример поиска статей с авторами из списка организаций:\r\n\r\nAF-ID() OR AF-ID() OR …. OR AF-ID()\r\n\r\nРезультаты поиска можно выгрузить в формате CSV, однако, количество выгружаемых строк ограничено.\r\nAPI-интерфейс\r\nДля выполнения запросов через API необходимо получить api-key на портале Elsevier Developer Portal.\r\nПример поиска статей с соавторством исследователей из 2-х организаций:\r\n\r\napi.elsevier.com/content/search/scopus?start=0&query=AF-ID()+AND+AF-ID()&apiKey=здесь-api-ключ\r\n\r\nВид возвращаемых результатов API-запросов зависит от уровня доступа (подробнее). Уровень STANDARD доступен всем подписчикам Scopus.\r\nКоличество результатов поиска, которые можно последовательно выгрузить в пределах квот не ограничен (подробнее об использовании cursor).\r\nРекомендуем ознакомиться с тонкостями синтаксиса для поисковых запросов и возможностями использования facets.\r\nStackoverflow\r\nGithub\r\nPython: elsapi\r\nR: rscopus\r\nSciVal\r\nДоступен только подписчикам SciVal.\r\nSciVal API\r\nJSON пример ответа на запрос метрик для нескольких организаций.\r\nWikidata\r\nRIRO содержит идентификаторы организаций в Wikidata.\r\nСодержание элемента данных Wikidata, соответствующего организации, доступно по URL-ссылке вида:\r\n\r\nhttps://www.wikidata.org/wiki/Q1637997\r\n\r\nОднако, уникальные возможности Wikidata более наглядны в интерфейсе инструмента Scholia - профиль НГУ.\r\nДля работы с Wikidata можно использовать несколько инструментов:\r\nWikidata Query Service\r\nСервис требует понимания SPARQL-запросов. В Wikidata огромное количество простых и не очень простых примеров SPARQL-запросов, позволяющих быстро перейти к практике.\r\nЗапрос ниже возвращает ряд элементов Wikidata для НГУ.\r\n\r\nSELECT ?item ?orgname_eng ?orgname_rus ?elib ?grid ?google ?ror ?mag ?cr_funder ?doi_pref ?isni ?arwu ?the ?umultirank ?qs ?ria ?twitter ?facebook ?twitter_id ?youtube ?url ?articleEN ?articleRU ?itemLabel WHERE { VALUES ?item {wd:Q1637997} optional {?item wdt:P214 ?viaf.} optional {?item wdt:P213 ?isni.} optional {?item wdt:P5242 ?arwu.} optional {?item wdt:P2463 ?elib.} optional {?item wdt:P646 ?google.} optional {?item wdt:P2427 ?grid.} optional {?item wdt:P5584 ?qs.} optional {?item wdt:P6081 ?ria.} optional {?item wdt:P6366 ?mag.} optional {?item wdt:P6782 ?ror.} optional {?item wdt:P5586 ?the.} optional {?item wdt:P5600 ?umultirank.} optional {?item wdt:P2002 ?twitter.} optional {?item p:P2002/pq:P6552 ?twitter_id.} optional {?item wdt:P856 ?url.} optional {?item wdt:P3153 ?cr_funder.} optional {?item wdt:P1662 ?doi_pref.} optional {?item wdt:P2013 ?facebook.} optional {?item wdt:P2397 ?youtube.} ?item rdfs:label ?orgname_eng FILTER (lang(?orgname_eng)=“en”) ?item rdfs:label ?orgname_rus FILTER (lang(?orgname_rus)=“ru”) OPTIONAL { ?articleEN schema:about ?item. ?articleEN schema:isPartOf https://en.wikipedia.org/. ?articleRU schema:about ?item. ?articleRU schema:isPartOf https://ru.wikipedia.org/. } SERVICE wikibase:label {bd:serviceParam wikibase:language “en” .}}\r\n\r\n\r\n\r\nWikimedia API\r\nСинтаксис запрос для получения JSON-файла с содержимым элемента Wikidata выглядит так:\r\n\r\nhttps://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1637997\r\n\r\nБолее подробная информация приведена в справочнике по MediaWiki API.\r\nPython: Wikidata\r\nR: WikidataQueryServiceR\r\nR: WikidataR\r\nКроме этого Wiki-сообществом созданы ещё десятки кастомных онлайн-инструментов для работы с Wikidata.\r\nROR\r\nРесурс ROR предлагает пользователям открытый API-сервис для получения информации из профилей организаций. Запрос ниже возвращает JSON с информацией об организации с идентификатором ROR 04zy24864.\r\n\r\nhttps://api.ror.org/organizations/04zy24864\r\n\r\nПроверить существование организации можно, выполнив поиск вида:\r\n\r\nhttps://ror.org/search?page=1&query=Bauman+AND+Technical\r\n\r\nДатасет ROR\r\nGithub ROR Community\r\nPython: ror-api\r\nМетаданные из профилей организации распространяются по открытой лицензии Creative Commons CC0 1.0 Universal Public Domain Dedication.\r\nMicrosoft Academic\r\nСервис Microsoft Academic будет закрыт в конце 2021 года.\r\nСсылка на профиль организации формируется с участием соответствующего идентификатора.\r\nПример: профиль НГУ.\r\nMicrosoft Academic API позволяет выполнять до 10 тысяч запросов в месяц с бесплатным ключом, однако, поля affilaitions заполнены далеко не во всех публикациях.\r\nПример API-запроса для получения избранных полей метаданных (DOI, год, название статьи, название журнала, автор, аффилиация) для первых 20 публикаций из профиля НГУ:\r\n\r\nhttps://api.labs.cognitive.microsoft.com/academic/v1.0/evaluate?expr=Composite(AA.AfId=188973947)&count=20&attributes=DOI,Y,Ti,J.JN,AA.AfId,AA.AfN&subscription-key=здесь-ваш-ключ\r\n\r\nО Project Academic Knowledge\r\nО Microsoft Academic Graph\r\nДокументация по API\r\nMicrosoft APIs - здесь получать ключ.\r\nWeb of Science / InCites\r\nОписание доступных API, предлагаемых компанией Clarivate, доступно на странице https://developer.clarivate.com/apis/. Насколько нам известно, на июль 2021 года, ни один из API не позволяет использовать названия организаций или иные публично доступные идентификаторы..\r\nGithub\r\neLIBRARY\r\nНа июль 2021 года на странице с описанием доступных API-сервисов на платформе eLIBRARY.RU отсутствовали API, принимающие идентификатор организации.\r\nПример URL-ссылки на профиль организации: НГУ\r\nApiCrafter (https://apicrafter.ru/)\r\nАвторы выражают признательность ООО «ОДСС» и АНО «Инфокультура» за готовность выступить информационным партнером проекта RIRO.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-23T19:38:50+03:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

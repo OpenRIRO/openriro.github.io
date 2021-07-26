@@ -1,0 +1,522 @@
+---
+title: "RIRO версия 1.1"
+description: |
+  Версия 1.1 открытого индекса российских научных организаций - идентификаторы РИНЦ/eLIBRARY, указатели ведомственной принадлежности и ещё больше организаций.    
+author:
+  - first_name: "Aleksei"
+    last_name: "Lutai" 
+    url: https://www.linkedin.com/in/lutaya/
+    orcid_id: 0000-0003-1341-781X
+  - first_name: "Ivan"
+    last_name: "Sterligov"
+    orcid_id: 0000-0001-9736-4713   
+date: 07-26-2021
+categories:
+  - riro
+  - ror
+  - wikidata
+  - microsoft academic
+  - scopus
+  - scival
+  - web of science
+  - incites
+  - elibrary
+preview: images/chart_examples_v1.1.png
+creative_commons: CC BY
+output:
+  distill::distill_article:
+    self_contained: false
+    highlight: kate
+    highlight_downlit: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE, eval=TRUE, echo=FALSE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	echo = FALSE,
+	warning = FALSE,
+	class.output = "outputstyle",
+	include = TRUE
+)
+Sys.setlocale("LC_CTYPE","russian")
+Sys.setlocale("LC_COLLATE","russian")
+Sys.setlocale("LC_TIME", "russian")
+
+library(tidyverse)
+library(scales)
+library(DT)
+
+onedrive <- list.dirs("C:/Users", recursive = FALSE) %>% 
+  .[grepl("alexe|WD|lutay",.)] %>% list.dirs(., recursive = FALSE) %>% 
+  .[grepl("onedrive",., ignore.case = TRUE)]
+
+dir <- paste0(onedrive, "/RusOrgReg/")
+img.dir <- paste0(getwd(), "/images/")
+
+options(DT.options = list(pageLength = 5, dom = "Brftip",  
+  deferRender = TRUE, ordering = TRUE, autoWidth = TRUE, scrollX = TRUE,
+  language = list(
+    url = 'https://cdn.datatables.net/plug-ins/1.10.11/i18n/Russian.json')))
+```
+
+::: {#hello .translation}
+[ENGLISH VERSION](https://openriro.github.io/posts/rirov11eng)
+:::
+
+## RIRO (версия 1.1) 
+
+С момента выхода [первой версии](https://openriro.github.io/posts/rirov10) открытого российского индекса научных организаций ([что такое RIRO?](https://openriro.github.io/about)) прошло 2 месяца, в течение которых авторы проекта с большим удовлетворением принимали положительные отзывы и комментарии, подтверждающие востребованность RIRO. 
+
+Новая версия RIRO включает следующие обновления:
+
+- добавлены идентификаторы организаций, используемые в eLIBRARY.ru и РИНЦ API.
+
+- для действующих головных (!) организаций добавлены коды и значения Общероссийского классификатора органов государственного управления (ОКОГУ)
+
+- расширен список организаций (всего сейчас 2818 действующих головных организаций) 
+
+- для всех организаций обновлены регистрационные данные ЕГРЮЛ (июль)
+
+- обновлены идентификаторы Wikidata (удалены ошибки, внесены новые поля). 
+
+На иллюстрации ниже показано наличие идентификаторов Scopus, ROR, Wikidata, InCites для организаций, включенных в RIRO (v.1.1.2). Приведенные на иллюстрации значения основаны на подсчете идентификаторов для головных и действующих организаций и не учитывают идентификаторы, соответствующие структурным подразделениям или ликвидированным правопредшественникам.
+
+```{r, layout="l-body", echo=FALSE, fig.width=10, fig.height=5.5}
+filename <- paste0(img.dir, "chart_upset_v1.1.png")
+knitr::include_graphics(filename)
+```
+
+Как Вы уже могли заметить, вместе с релизом версии 1.1 проект перешел на веб-сайт, на котором, мы надеемся, будут появляться не только релизы, но и материалы, связанные с использованием RIRO. Присылайте нам ссылки на Ваши исследования или фрагменты кода - мы будем рады их разместить в разделе "Примеры использования" (Examples).
+
+## Датасет {#dataset}
+
+Датасет состоит из отдельных таблиц в формате CSV (может быть открыт в Excel или в любых программах по работе с данными), связанных через идентификатор code, который выступает в роли первичного ключа.
+
+Набор таблиц можно скачать с Zenodo [вручную](https://doi.org/10.5281/zenodo.4775290) или программными средствами, используя [OAI-PMH Harvesting API](https://zenodo.org/oai2d?verb=ListRecords&set=user-riro&metadataPrefix=oai_dc) или [REST API](https://developers.zenodo.org/). Zenodo – один из ведущих репозиториев данных открытой науки, развиваемый на базе ЦЕРН ([подробнее](https://help.zenodo.org/features/)).
+
+Процитировать датасет (без указания версии): 
+
+- Sterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290
+
+Процитировать датасет RIRO v.1.1.2 (последняя версия):
+
+Sterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) (Version 1.1.2) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.5136473
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+riro_versions <- list.dirs(paste0(dir, "/final_tables/"), recursive =  FALSE) %>% 
+  sort(., decreasing = TRUE) %>% .[grepl("1.1.1",.)]
+
+riro_tables <- list.files(riro_versions, full.names = TRUE)
+```
+
+Ниже будут показаны фрагменты каждой таблицы с информацией о 3 учреждениях, выбранных в качестве примера:
+
+- СИБИРСКИЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ
+
+- ПЕРМСКИЙ ФЕДЕРАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР УРО РАН
+
+- ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ УНИВЕРСИТЕТ
+
+## Таблица 1. Официальные сведения {#table1} 
+
+Содержит официальные сведения об организации - ОГРН, ИНН/КПП, полное и краткое названия, тип (головное, филиал или представительство) и статус (активное, ликвидировано или в стадии реорганизации). В версии 1.1. в таблицу также добавлены коды и значения Общероссийского классификатора органов государственного управления (ОКОГУ) - только для действующих и головных организаций.
+
+В таблице ниже для экономии места краткие названия и коды ОКОГУ не приведены. 
+
+```{r message=FALSE, warning=FALSE, echo=FALSE, eval=TRUE}
+t1 <- riro_tables %>% .[grepl("table1_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character()))
+
+test_group <- t1 %>% filter(ogrn %in% c("1025900517378", "1022402137460", "1026103165241"))
+
+test_group %>% select(code, level, status, name_full, full_okogu, ogrn, inn, kpp) %>% 
+datatable(rownames = FALSE, filter = "none", escape = FALSE, 
+      class = "row-border", 
+      options = list(columnDefs = list(
+              list(width = '300px', targets = c(4)),
+              list(width = '700px', targets = c(3)))
+              )
+      )
+```
+
+Поиск по таблице выполнялся по значениям ОГРН, поэтому в таблице появились также действующие филиалы, но каждая строка (запись) имеет свой собственный уникальный код (поле code), который и выступает связующим звеном (ключом) между таблицами.  
+
+## Таблица 2. Адреса и геоданные {#table2}
+
+В этой таблице по значениям code можно найти полный адрес организации (или филиала), отдельные фрагменты адреса, а также код geocode, временной пояс и географические координаты. 
+
+```{r message=FALSE, warning=FALSE, echo=FALSE, eval=TRUE}
+t2 <- riro_tables %>% .[grepl("table2_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character()))
+ 
+t2 %>% filter(code %in% test_group$code) %>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, 
+            class = "row-border", 
+            options = list(columnDefs = list(
+              list(width = '450px', targets = c(6)))))
+```
+
+Таблица 2 - единственная(!) таблица, поля которой имеют однозначное соответствие с полями таблицы 1 (по значению поля code). Во всех остальных таблицах одному коду (code) могут соответствовать несколько строк.
+
+## Таблица 3. Иерархия {#table3}
+
+Данная таблица связывает существующие головные организации с филиалами и правопредшественниками (для удобства в этом документе они обозначены как "дочерние организации"). 
+
+Таблица не является абсолютно полной, но для большинства научных организаций включает в себя включает все официальные филиалы (в некоторых случаях и представительства), а также правопредшественников последней реорганизации. Для некоторых организаций часть филиалов не была включена в RIRO из-за отсутствия их связи с научными исследованиями (представительства, базы отдыха, службы охраны и т.п.).
+
+Повторим ещё раз:
+
+- для некоторых организаций таблицы 1 и 3 RIRO содержат неполный (!) список филиалов
+
+- таблица 1 и 3 не включает всех (!) правопредшественников (только последних и не для всех организаций). При необходимости сбора полных данных мы рекомендуем обратиться к соответствующим официальным источникам информации. 
+
+Столбцы code относятся к головной организации, child_code - это code для дочерних организаций, relation - тип отношения (2 значения - "Филиал" или "Правопредшественники").
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t3 <- riro_tables %>% .[grepl("table3_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+full_test <- t3 %>% filter(code %in% test_group$code) %>% arrange(desc(code))
+
+full_test %>% datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE, 
+                           columnDefs = list(list(className = 'dt-center', targets = c(0:2)))))
+```
+
+Итак, используя список из 3 ОГРН, мы из таблицы 1 извлекли `r n_distinct(test_group$code)` строк с различными значениями code, по которым в таблице 3 нашли code правопредшественников, получив в итоге `r n_distinct(c(full_test$code, full_test$child_code))` "объектов" с уникальными значениями code.
+
+Соберем теперь группы вида: {code головной организации} - {все родственные коды} - {отношение}.  
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+hierarchy <- full_test %>% 
+  add_row(code = unique(full_test$code), 
+          child_code = unique(full_test$code),
+          relation = "Головная") %>% 
+  rename(parent_code = code, code = child_code) %>% 
+  arrange(parent_code, relation)
+
+hierarchy %>% count(parent_code, relation) %>% 
+  pivot_wider(names_from = relation, 
+              values_from = n, values_fill = 0) %>%
+    left_join(t1 %>% select(parent_code = code, name_short)) %>% 
+  relocate(parent_code, name_short, `Головная`, 
+           `Филиал`, `Правопредшественники`) %>% 
+  datatable(rownames = FALSE, filter = "none", 
+            escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE, 
+  columnDefs = list(list(className = 'dt-center', 
+                         targets = c(0, 2:4)))))
+```
+
+Все найденные в таблице 3 дочерние организации содержатся в таблице 1. Филиалы можно было найти в таблице 1 и без обращения к таблице 3 - они имеют те же значения ОГРН и ИНН, что и головные учреждения.
+
+Ниже мы покажем, какую роль в RIRO играют правопредшественники и почему не стоит игнорировать таблицу 3. 
+
+## Таблица 4. ROR {#table4}
+
+Research Organizations Registry – стартовавший в 2019 г. международный общественный проект по созданию открытой базы уникальных идентификаторов научных организаций, по смыслу близкий проекту ORCID для отдельных ученых, построенный с использованием наработок аналогичного проекта GRID (Global Research Identifier Database). Идентификаторы ROR открыто доступны для скачивания как в виде [датасета](https://figshare.com/collections/ROR_Data/4596503), так и через [API](https://github.com/ror-community/ror-api). Любой может предложить дополнение или исправление в ROR.
+
+Таблица содержит записи из БД ROR [версия 9](https://doi.org/10.6084/m9.figshare.c.4596503.v9), которым найдено соответствие в RIRO (ключ code).
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t4 <- riro_tables %>% .[grepl("table4_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character()))
+
+hierarchy %>% inner_join(t4, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", 
+            escape = FALSE, class = "row-border", 
+            options = list(columnDefs = list(
+              list(width = '250px', targets = c(3:5)),
+              list(width = '400px', targets = c(8)))))
+```
+
+Некоторые записи в поле Relationships содержат композитную строку следующего вида: 
+
+`label:xxxx|type:yyyyyy|id:https://ror.org/zzzzz` 
+
+которая содержит 3 компонента label (название), type (тип отношений) и id (ROR идентификатор) для организации, которая, *по мнению создателей ROR*, имеет отношение искомой.
+
+## Таблица 5. Wikidata {#table5}
+
+WikiData – общественный репозиторий всевозможных структурированных характеристик разнообразных объектов (в нашем случае – научных организаций), дополнять и редактировать которые может любой. Данные из WikiData доступны открыто через разнообразные интерфейсы.
+
+Важно понимать, что обилие информации в WikiData (от профилей в twitter до списка ректоров) внесено разнообразными людьми без системной верификации и нередко содержит неточности.
+
+В версии 1.1 исчезло поле ItemLabel, которое дублировало Org поле domain с 
+
+Таблица содержит идентификаторы БД Wikidata, которым было найдено соответствие в реестре RIRO.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t5 <- riro_tables %>% .[grepl("table5_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character()))
+
+hierarchy %>% inner_join(t5, by = "code") %>% 
+  arrange(parent_code) %>% 
+  select(-parent_code, - relation, -wd_item) %>%  
+  mutate_at(c("wikipedia_eng", "wikipedia_rus", "wd_altlabel_eng", "wd_altlabel_rus"),
+            ~ifelse(is.na(.x),.x, paste0(substr(.x,1,60),"...")))%>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(columnDefs = list(
+              list(width = '250px', targets = c(2:5)),
+              list(width = '150px', targets = c(6:9)))))
+```
+
+## Таблица 6. Scopus {#table6}
+
+Scopus – одна из ведущих мировых баз научного цитирования, аккумулирующая метаданные научных публикаций из десятков тысяч журналов и конференций, а также части книг. Большинство государственных научно-образовательных организаций России имеет к ней доступ в рамках национальной подписки. В рамках этого стандартного доступа всем желающим без дополнительной платы доступен и полноценный [API-интерфейс](https://dev.elsevier.com/scopus.html), к которому доступны дружелюбные для неискушенных пользователей API-обертки (wrapper) на [python](https://pybliometrics.readthedocs.io/en/stable/) и [R](https://github.com/muschellij2/rscopus), в которых есть функции для сбора информации по идентификаторам организаций. 
+
+Таблица содержит идентфикаторы Scopus, которым было найдено соответствие в БД RIRO. 
+
+Обращаем внимание, что соответствие профилей организациям определялось по названиям первых и данная таблица не гарантирует полноту или безошибочность их наполнения в Scopus. Приведенное в таблице количество публикаций соответствовало действительности на момент сбора данных (апрель-май 2021).  
+
+О том, как корректировать профиль организации в Scopus можно прочесть на [русскоязычном сайте Elsevier](https://elsevierscience.ru/products/scopus/).
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t6 <- riro_tables %>% .[grepl("table6_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t6, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(columnDefs = list(
+              list(className = 'dt-center', targets = c(0,6)),
+              list(width = '350px', targets = c(2:3)))))
+```
+
+## Таблица 7. Microsoft Academic {#table7}
+
+[Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) (MAG) – проект исследовательского подразделения Microsoft по созданию базы научного цитирования и метаданных на основе информации, собираемой парсерами Bing с сайтов журналов и PDF-файлов ([подробнее](https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction)). В этом заключается главное отличие MAG от Web of Science и Scopus, которые получают информацию от издателей. 
+
+За счет сочетания открытости и сбора роботом MAG является уникальным источником, особенно в «горячей» и приоритетной области Computer Science, и основой для ряда инструментов нового поколения ([Lens](https://www.lens.org/), [Semantic Scholar](https://www.semanticscholar.org/), [Open Academic Graph](https://www.microsoft.com/en-us/research/project/open-academic-graph/)).
+
+Несмотря на последние новости о [прекращении работы Microsoft Academic](https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/), мы решили включить идентификаторы MAG в RIRO. Есть вероятность, что проект MAG в силу своей большой значимости для инфраструктуры открытой науки будет перезапущен сообществом и идентификаторы какое-то время будут в обращении. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t7 <- riro_tables %>% .[grepl("table7_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t7, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE,
+              columnDefs = list(
+                list(className = 'dt-center', targets = c(0:1)),
+                list(width = '450px', targets = c(2)))))
+```
+
+## Таблица 8. InCites {#table8}
+
+InCites – аналитическая надстройка над базой Web of Science Core Collection, доступная части российских вузов. К сожалению, в системе нет API-интерфейса для сбора показателей по организациям, но они доступны для ручного скачивания и связывания с другими данными через название, которое и служит «идентификатором».
+
+В таблице приведены официальные названия организации в БД Web of Science и InCites.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t8 <- riro_tables %>% .[grepl("table8_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t8, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE,
+              columnDefs = list(
+                list(className = 'dt-center', targets = c(0,3)),
+                list(width = '450px', targets = c(1:2)))))
+```
+
+## Таблица 9. SciVal {#table9}
+
+SciVal – аналитическая надстройка над базой Scopus, доступная части российских вузов. У ряда подписчиков системы есть доступ к API-интерфейсу, который позволяет собирать многочисленные показатели по идентификаторам организаций, представленным в таблице. 
+
+В таблице приведены официальное название и уникальный идентификатор организации в БД SciVal.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t9 <- riro_tables %>% .[grepl("table9_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t9, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE,
+              columnDefs = list(
+                list(className = 'dt-center', targets = c(0:1)),
+                list(width = '450px', targets = c(2)))))
+```
+
+## Таблица 10. Мониторинг эффективности вузов Минобрнауки (1-Мониторинг) {#table10}
+
+Мониторинг эффективности вузов Минобрнауки – основной источник сведений о работе вузов, включает все организации высшего образования, кроме относящихся к силовым ведомствам.
+
+Идентификатор в системе мониторинга однозначно указывает на URL открытой веб-страницы с данными о кадрах, финансовой информации, студентах и аспирантах, недвижимости и многом другом, что является очень ценным в соотнесении с данными из других таблиц. Ссылка на профиль Сибирского федерального университеты (id = 1507) выглядит так: [https://monitoring.miccedu.ru/iam/2020/_vpo/inst.php?id=1507](https://monitoring.miccedu.ru/iam/2020/_vpo/inst.php?id=1507). 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t10 <- riro_tables %>% .[grepl("table10_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t10, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE,
+              columnDefs = list(list(className = 'dt-center', 
+                                     targets = c(0:1)))))
+```
+
+## Таблица 11. Web of Science {#table11}
+
+Web of Science – старейшая и наиболее известная в мире наукометрическая база данных, доступная для большинства научно-образовательных организаций России в рамках национальной подписки. 
+
+В настоящий момент Web of Science не предоставляет пользователям уникальные идентификаторы организаций, вместо них используются «официальные» варианты названий, но ситуация осложняется тем, что вместе с ними существует и множество неофициальных. И те, и другие представлены в таблице 11 в том виде, в котором они встречаются в результатах поиска в интерфейсе онлайн-сервиса Web of Science.
+
+Все эти варианты можно использовать для автоматизации процессов сбора сведений о публикациях с участием организаций (через выгрузку вариантов названий из модуля analyze results с последующим сопоставлением вариантов названий с теми, что присутствуют в таблице 11.  
+
+К настоящему времени мы распознали лишь часть названий. Надеемся, что удастся увеличить количество строк в этой таблице в следующих релизах.
+
+К сожалению, в рамках централизованной подписки на Web of Science доступ к API-интерфейсам для выгрузки информации об организациях не предоставлен. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t11 <- riro_tables %>% .[grepl("table11_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t11, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", 
+            escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE,
+              columnDefs = list(
+                list(className = 'dt-center', targets = c(0)),
+                list(width = '450px', targets = c(1,3)))))
+```
+
+## Таблица 12. eLIRBARY.ru {#table12}
+
+eLIBRARY.ru - крупнейший российский агрегатор научных изданий. В последние годы компания активно развивает онлайн-сервисы, в том числе и API. Идентификатор организации используется для образования url-адреса профиля организации (например, https://www.elibrary.ru/org_about.asp?orgsid=17548) и некоторыми API принимается в качестве атрибута запроса.
+
+В таблицу 12 включены идентификаторы 1827 крупнейших (по количеству публикаций) организаций. В следующих релизах RIRO количество организаций, по согласованию с ООО "НАУЧНАЯ ЭЛЕКТРОННАЯ БИБЛИОТЕКА", будет увеличено.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+t12 <- riro_tables %>% .[grepl("table12_",.)] %>% 
+  read_csv(col_types = cols(.default = col_character())) 
+
+hierarchy %>% inner_join(t12, by = "code") %>% 
+  arrange(parent_code) %>% select(-parent_code, - relation) %>% 
+  datatable(rownames = FALSE, filter = "none", 
+            escape = FALSE, class = "row-border", 
+            options = list(autoWidth = FALSE,
+              columnDefs = list(
+                list(className = 'dt-center', targets = c(0,1)),
+                list(width = '450px', targets = c(2)))))
+```
+
+## Наличие идентификаторов для 3 организаций {#example}
+
+На иллюстрации ниже для выбранных организаций показано как идентификаторы зарубежных сервисов (ROR, GRID, Scopus Affiliation ID, InCites ID, MAG, Wikidata) и российского оператора (Мониторинг) соответствуют головным организациям, их филиалам и правопредшественникам.
+
+Группы идентификаторов для каждой организации представлены в виде блоков (по горизонтали). В каждом блоке на оси X расположены идентификаторы, по оси Y - сами организации, их филиалы и правпредшественники. Для каждого идентификатора показан тип организации.
+
+```{r, layout="l-body", fig.width=10, fig.height=5.5}
+filename <- paste0(img.dir, "chart_examples_v1.1.png")
+knitr::include_graphics(filename)
+```
+
+## Примечания {#notes}
+
+- Таблицы RIRO содержат не все поля из оригинальных баз данных. 
+
+- Содержимое столбцов в таблицах 4-12 соответствует тому, что находится в базах данных.
+
+- Некоторые таблицы содержат похожие поля. Например, в таблице 4 (ROR) у организаций есть идентификатор Wikidata (ror_wikidata), а в таблице 5 (Wikidata) - идентификатор ROR (wd_ror). Соответствие этих данных друг другу не проверялось.
+
+- Соответствие каждого идентификатора определенной российской организации было сделано, исходя из имеющихся данных (совпадение названия и города). 100% корректность не гарантирована.
+
+## Критерии отбора организаций для включения в RIRO
+
+Приоритетными организациями для RIRO являются:
+
+- государственные организации федерального и регионального подчинения, которые участвуют прямо или опосредованно в научных исследованиях (научные центры и институты, вузы, крупные лечебно-профилактические учреждения и научно-клинические центры, заповедники, музеи и т.д.);
+
+- частные организации, которые проводят совместные исследования с государственными организациями.
+
+## Обратная связь {#feedback}
+
+Форма для [обратной связи](https://docs.google.com/forms/d/e/1FAIpQLScK-USC1BdyaJFudLHHy1Qo2T6ZFnVDLoknRixCfiasJwMbrw/viewform) предусматривает следующие варианты:
+
+- Обновить официальные сведения об организации (филиале, представительстве)
+- Добавить новую организацию, отсутствующую в таблицах RIRO
+- Исправить соответствие организаций и идентификаторов в таблицах 4-12 (ROR, GRID, Wikidata и др.)
+- Добавить новые соответствия организаций и идентификаторов, отсутствующие в таблицах 4-12
+- Предложить новый источник данных (базу данных, реестр). 
+
+Ваши замечания и предложения помогут улучшить RIRO. 
+
+### Acknowledgments {.appendix}
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+pkgs <- c('dplyr', 'readr', 'tidyr', 'purrr', 'ggplot2', 'stringr',
+          'scales', 'extrafont', 'ComplexUpset', 
+          'DT', 'knitr', 'rmarkdown', 'zen4R')
+
+do.call('c',lapply(pkgs, citation)) %>% sort()
+```
+
+Allaire J, Xie Y, McPherson J, Luraschi J, Ushey K, Atkins A, Wickham H, Cheng J, Chang W,
+Iannone R (2021). _rmarkdown: Dynamic Documents for R_. R package version 2.7, <URL:
+https://github.com/rstudio/rmarkdown>.
+
+Blondel E (2021). _zen4R: Interface to 'Zenodo' REST API_. R package version 0.4-3, <URL:
+https://github.com/eblondel/zen4R>.
+
+Chang, W (2014). _extrafont: Tools for using fonts_. R package version 0.17, <URL:
+https://CRAN.R-project.org/package=extrafont>.
+
+Henry L, Wickham H (2020). _purrr: Functional Programming Tools_. R package version 0.3.4,
+<URL: https://CRAN.R-project.org/package=purrr>.
+
+Krassowski M (2020). “ComplexUpset.” doi: 10.5281/zenodo.3700590 (URL:
+https://doi.org/10.5281/zenodo.3700590), <URL: https://doi.org/10.5281/zenodo.3700590>.
+
+Lex A, Gehlenborg N, Strobelt H, Vuillemot R, Pfister H (2014). “UpSet: Visualization of
+Intersecting Sets,.” _IEEE Transactions on Visualization and Computer Graphics_, *20*(12),
+1983–1992. doi: 10.1109/TVCG.2014.2346248 (URL:
+https://doi.org/10.1109/TVCG.2014.2346248), <URL:
+https://doi.org/10.1109/TVCG.2014.2346248>.
+
+Wickham H (2020). _tidyr: Tidy Messy Data_. R package version 1.1.2, <URL:
+https://CRAN.R-project.org/package=tidyr>.
+
+Wickham H (2016). _ggplot2: Elegant Graphics for Data Analysis_. Springer-Verlag New York.
+ISBN 978-3-319-24277-4, <URL: https://ggplot2.tidyverse.org>.
+
+Wickham H (2019). _stringr: Simple, Consistent Wrappers for Common String Operations_. R
+package version 1.4.0, <URL: https://CRAN.R-project.org/package=stringr>.
+
+Wickham H, Francois R, Henry L, Muller K (2021). _dplyr: A Grammar of Data Manipulation_.
+R package version 1.0.3, <URL: https://CRAN.R-project.org/package=dplyr>.
+
+Wickham H, Hester J (2020). _readr: Read Rectangular Text Data_. R package version 1.4.0,
+<URL: https://CRAN.R-project.org/package=readr>.
+
+Wickham H, Seidel D (2020). _scales: Scale Functions for Visualization_. R package version
+1.1.1, <URL: https://CRAN.R-project.org/package=scales>.
+
+Xie Y (2020). _knitr: A General-Purpose Package for Dynamic Report Generation in R_. R
+package version 1.30, <URL: https://yihui.org/knitr/>.
+
+Xie Y (2015). _Dynamic Documents with R and knitr_, 2nd edition. Chapman and Hall/CRC,
+Boca Raton, Florida. ISBN 978-1498716963, <URL: https://yihui.org/knitr/>.
+
+Xie Y (2014). “knitr: A Comprehensive Tool for Reproducible Research in R.” In Stodden V,
+Leisch F, Peng RD (eds.), _Implementing Reproducible Computational Research_. Chapman and
+Hall/CRC. ISBN 978-1466561595, <URL: http://www.crcpress.com/product/isbn/9781466561595>.
+
+Xie Y, Allaire J, Grolemund G (2018). _R Markdown: The Definitive Guide_. Chapman and
+Hall/CRC, Boca Raton, Florida. ISBN 9781138359338, <URL:
+https://bookdown.org/yihui/rmarkdown>.
+
+Xie Y, Cheng J, Tan X (2021). _DT: A Wrapper of the JavaScript Library 'DataTables'_. R
+package version 0.17, <URL: https://CRAN.R-project.org/package=DT>.
+
+Xie Y, Dervieux C, Riederer E (2020). _R Markdown Cookbook_. Chapman and Hall/CRC, Boca
+Raton, Florida. ISBN 9780367563837, <URL: https://bookdown.org/yihui/rmarkdown-cookbook>.

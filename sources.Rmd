@@ -1,0 +1,199 @@
+---
+title: "Источники сведений для RIRO"
+description: |
+  Описание основных интерфейсов для работы с базами данных, позволяющих использовать идентификаторы включенные в RIRO.
+author:
+  - first_name: "Aleksei"
+    last_name: "Lutai" 
+    url: https://www.linkedin.com/in/lutaya/
+    orcid_id: 0000-0003-1341-781X
+  - first_name: "Ivan"
+    last_name: "Sterligov"
+    orcid_id: 0000-0001-9736-4713   
+date: 07-25-2021
+creative_commons: CC BY
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    highlight: kate
+    highlight_downlit: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+## Scopus
+
+Scopus позволяет выполнять поиск по базе данных с использованием идентификаторов организаций. 
+
+- веб-интерфейс (Advanced Search) 
+
+Идентификаторы организаций помещаются в оператор AF-ID(). Пример поиска статей с авторами из списка организаций: 
+
+:::: {.blue}
+AF-ID() OR AF-ID() OR .... OR AF-ID()
+::::
+
+Результаты поиска можно выгрузить в формате CSV, однако, количество выгружаемых строк ограничено.
+
+- API-интерфейс 
+
+Для выполнения запросов через API необходимо получить api-key на портале [Elsevier Developer Portal](https://dev.elsevier.com/scopus.html).
+
+Пример поиска статей с соавторством исследователей из 2-х организаций:
+
+:::: {.blue}
+api.elsevier.com/content/search/scopus?start=0&query=AF-ID()+AND+AF-ID()&apiKey=здесь-api-ключ
+::::
+
+Вид возвращаемых результатов API-запросов зависит от уровня доступа ([подробнее](https://dev.elsevier.com/sc_search_views.html)). Уровень STANDARD доступен всем подписчикам Scopus.
+
+Количество результатов поиска, которые можно последовательно выгрузить в [пределах квот](https://dev.elsevier.com/api_key_settings.html) не ограничен ([подробнее об использовании cursor](https://dev.elsevier.com/support.html)).
+
+Рекомендуем ознакомиться с тонкостями синтаксиса для поисковых [запросов](https://dev.elsevier.com/sc_search_tips.html) и возможностями использования [facets](https://dev.elsevier.com/tecdoc_api_facets.html).
+
+- [Stackoverflow](https://stackoverflow.com/search?tab=newest&q=scopus)
+
+- [Github](https://github.com/ElsevierDev)
+
+- [Python: elsapi](https://github.com/ElsevierDev/elsapy)
+
+- [R: rscopus](https://github.com/muschellij2/rscopus)
+
+## SciVal
+
+Доступен только подписчикам SciVal.
+
+- [SciVal API](https://dev.elsevier.com/scival_apis.html)
+
+- [JSON пример ответа](https://dev.elsevier.com/payloads/scival/institutionMetricsResp.json) на запрос метрик для нескольких организаций. 
+
+## Wikidata
+
+RIRO содержит идентификаторы организаций в Wikidata. 
+
+Содержание элемента данных Wikidata, соответствующего организации, доступно по URL-ссылке вида:
+
+:::: {.blue}
+https://www.wikidata.org/wiki/Q1637997
+::::
+
+Однако, уникальные возможности Wikidata более наглядны в интерфейсе инструмента Scholia - [профиль НГУ](https://scholia.toolforge.org/organization/Q1637997). 
+
+Для работы с Wikidata можно использовать несколько инструментов:
+
+- [Wikidata Query Service](https://query.wikidata.org/)
+
+Сервис требует понимания [SPARQL-запросов](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries). В Wikidata огромное количество [простых](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples) и [не очень простых](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples/advanced) примеров SPARQL-запросов, позволяющих быстро перейти к практике.  
+
+Запрос ниже возвращает ряд элементов Wikidata для НГУ.  
+
+:::: {.blue}
+SELECT ?item ?orgname_eng ?orgname_rus ?elib ?grid ?google 
+        ?ror ?mag ?cr_funder ?doi_pref ?isni ?arwu ?the ?umultirank ?qs ?ria ?twitter 
+        ?facebook ?twitter_id ?youtube ?url ?articleEN ?articleRU ?itemLabel<br/>
+WHERE {<br/>
+  VALUES ?item {wd:Q1637997}<br/>
+    optional {?item wdt:P214 ?viaf.} optional {?item wdt:P213 ?isni.}<br/>
+    optional {?item wdt:P5242 ?arwu.} optional {?item wdt:P2463 ?elib.}<br/>
+    optional {?item wdt:P646 ?google.} optional {?item wdt:P2427 ?grid.}<br/> 
+    optional {?item wdt:P5584 ?qs.} optional {?item wdt:P6081 ?ria.}<br/>
+    optional {?item wdt:P6366 ?mag.} optional {?item wdt:P6782 ?ror.}<br/>
+    optional {?item wdt:P5586 ?the.} optional {?item wdt:P5600 ?umultirank.}<br/>
+    optional {?item wdt:P2002 ?twitter.} optional {?item p:P2002/pq:P6552 ?twitter_id.}<br/>
+    optional {?item wdt:P856 ?url.}<br/> 
+    optional {?item wdt:P3153 ?cr_funder.} optional {?item wdt:P1662 ?doi_pref.}<br/> 
+    optional {?item wdt:P2013 ?facebook.} optional {?item wdt:P2397 ?youtube.}<br/>
+    ?item rdfs:label ?orgname_eng FILTER (lang(?orgname_eng)="en")<br/> 
+    ?item rdfs:label ?orgname_rus FILTER (lang(?orgname_rus)="ru")<br/> 
+  OPTIONAL {<br/>
+    ?articleEN schema:about ?item.
+    ?articleEN schema:isPartOf <https://en.wikipedia.org/>.<br/>
+    ?articleRU schema:about ?item.
+    ?articleRU schema:isPartOf <https://ru.wikipedia.org/>.<br/>
+  }<br/>
+   SERVICE wikibase:label {bd:serviceParam wikibase:language "en" .}}
+::::
+
+<iframe style="width: 65vw; height: 55vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Fitem%20%3Forgname_eng%20%3Forgname_rus%20%3Felib%20%3Fgrid%20%3Fgoogle%20%0A%20%20%20%20%20%20%20%20%3Fror%20%3Fmag%20%3Fcr_funder%20%3Fdoi_pref%20%3Fisni%20%3Farwu%20%3Fthe%20%3Fumultirank%20%3Fqs%20%3Fria%20%3Ftwitter%20%0A%20%20%20%20%20%20%20%20%3Ffacebook%20%3Ftwitter_id%20%3Fyoutube%20%3Furl%20%3FarticleEN%20%3FarticleRU%20%3FitemLabel%0AWHERE%20%7B%0A%20%20%20VALUES%20%3Fitem%20%7Bwd%3AQ1637997%7D%0A%20%20%20optional%20%7B%3Fitem%20wdt%3AP214%20%3Fviaf.%7D%0A%20%20%20optional%20%7B%3Fitem%20wdt%3AP213%20%3Fisni.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP5242%20%3Farwu.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP2463%20%3Felib.%7D%20%20%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP646%20%3Fgoogle.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP2427%20%3Fgrid.%7D%20%20%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP5584%20%3Fqs.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP6081%20%3Fria.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP6366%20%3Fmag.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP6782%20%3Fror.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP5586%20%3Fthe.%7D%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP5600%20%3Fumultirank.%7D%0A%20%20%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP856%20%3Furl.%7D%20%0A%20%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP2002%20%3Ftwitter.%7D%20%20%0A%20%20%20%20optional%20%7B%3Fitem%20p%3AP2002%2Fpq%3AP6552%20%3Ftwitter_id.%7D%20%0A%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP3153%20%3Fcr_funder.%7D%0A%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP1662%20%3Fdoi_pref.%7D%20%0A%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP2013%20%3Ffacebook.%7D%20%0A%20%20%20%20optional%20%7B%3Fitem%20wdt%3AP2397%20%3Fyoutube.%7D%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Forgname_eng%20FILTER%20(lang(%3Forgname_eng)%3D%22en%22)%20%0A%20%20%20%3Fitem%20rdfs%3Alabel%20%3Forgname_rus%20FILTER%20(lang(%3Forgname_rus)%3D%22ru%22)%20%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3FarticleEN%20schema%3Aabout%20%3Fitem.%0A%20%20%20%20%3FarticleEN%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fen.wikipedia.org%2F%3E.%0A%20%20%20%20%3FarticleRU%20schema%3Aabout%20%3Fitem.%0A%20%20%20%20%3FarticleRU%20schema%3AisPartOf%20%3Chttps%3A%2F%2Fru.wikipedia.org%2F%3E.%0A%20%20%7D%0A%20%20%20SERVICE%20wikibase%3Alabel%20%7Bbd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20.%7D%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+- Wikimedia API
+
+Синтаксис запрос для получения JSON-файла с содержимым элемента Wikidata выглядит так:  
+
+:::: {.blue}
+https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1637997
+::::
+
+Более подробная информация приведена в [справочнике по MediaWiki API](https://www.mediawiki.org/wiki/API:Main_page).
+
+- [Python: Wikidata](https://pypi.org/project/Wikidata/)
+
+- [R: WikidataQueryServiceR](https://github.com/wikimedia/WikidataQueryServiceR)
+
+- [R: WikidataR](https://github.com/TS404/WikidataR)
+
+Кроме этого Wiki-сообществом созданы ещё десятки кастомных онлайн-инструментов [для работы с Wikidata](https://m.wikidata.org/wiki/Wikidata:Tools).
+
+## ROR
+
+Ресурс [ROR](https://ror.org/) предлагает пользователям открытый API-сервис для получения информации из профилей организаций. Запрос ниже возвращает JSON с информацией об организации с идентификатором ROR 04zy24864. 
+
+:::: {.blue}
+https://api.ror.org/organizations/04zy24864
+::::
+
+Проверить существование организации можно, выполнив поиск вида:
+
+:::: {.blue}
+https://ror.org/search?page=1&query=Bauman+AND+Technical
+::::
+
+- [Датасет ROR](https://doi.org/10.6084/m9.figshare.c.4596503)
+
+- [Github ROR Community](https://github.com/ror-community)
+
+- [Python: ror-api](https://github.com/ror-community/ror-api)
+
+Метаданные из профилей организации распространяются по открытой лицензии [Creative Commons CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0//).
+
+## Microsoft Academic
+
+Сервис Microsoft Academic [будет закрыт](https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/) в конце 2021 года.
+
+Ссылка на профиль организации формируется с участием соответствующего идентификатора. 
+
+Пример: [профиль НГУ](https://academic.microsoft.com/institution/188973947/).
+
+Microsoft Academic API позволяет выполнять до 10 тысяч запросов в месяц с бесплатным ключом, однако, поля affilaitions заполнены далеко не во всех публикациях.
+
+Пример API-запроса для получения избранных полей метаданных (DOI, год, название статьи, название журнала, автор, аффилиация) для первых 20 публикаций из профиля НГУ:
+
+:::: {.blue}
+https://api.labs.cognitive.microsoft.com/academic/v1.0/evaluate?expr=Composite(AA.AfId=188973947)&count=20&attributes=DOI,Y,Ti,J.JN,AA.AfId,AA.AfN&subscription-key=здесь-ваш-ключ
+::::
+
+- [О Project Academic Knowledge](https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction)
+
+- [О Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/)
+
+- [Документация по API](https://www.microsoft.com/en-us/research/project/academic-knowledge/)
+
+- [Microsoft APIs](https://msr-apis.portal.azure-api.net/) - здесь получать ключ.
+
+## Web of Science / InCites
+
+Описание доступных API, предлагаемых компанией Clarivate, доступно на странице https://developer.clarivate.com/apis/. Насколько нам известно, на июль 2021 года, ни один из API не позволяет использовать названия организаций или иные публично доступные идентификаторы..    
+
+- [Github](https://github.com/Clarivate-SAR)
+
+## eLIBRARY
+
+На июль 2021 года на странице с описанием доступных [API-сервисов на платформе eLIBRARY.RU](https://elibrary.ru/projects/api/api_info.asp?) отсутствовали API, принимающие идентификатор организации.
+
+- Пример URL-ссылки на профиль организации: [НГУ](https://elibrary.ru/org_about.asp?orgsid=214)
+
+## ApiCrafter (https://apicrafter.ru/)
+
+Авторы выражают признательность ООО «ОДСС» и АНО «Инфокультура» за готовность выступить информационным партнером проекта RIRO.

@@ -1,0 +1,122 @@
+---
+title: "О проекте OpenRIRO / About Open RIRO"
+description: |
+  Краткая информация о проекте / A brief information about the RIRO project.  
+author:
+  - first_name: "Aleksei"
+    last_name: "Lutai" 
+    url: https://www.linkedin.com/in/lutaya/
+    orcid_id: 0000-0003-1341-781X
+  - first_name: "Ivan"
+    last_name: "Sterligov"
+    orcid_id: 0000-0001-9736-4713   
+date: 05-24-2021
+creative_commons: CC BY
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    highlight: kate
+    highlight_downlit: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+## Что такое RIRO? {#about}
+
+[RIRO](https://github.com/OpenRIRO) - это проект Russian Index of the Research Organizations, запущенный в мае 2021 года. RIRO v.1.0 - представляет из себя набор таблиц, которые связывают российские юридические лица, задействованные в научных исследованиях, с идентификаторами и профилями российских и международных информационных систем: 
+
+- [Wikidata](https://www.wikidata.org/)
+
+- [ROR](https://ror.org/)
+
+- [GRID](https://www.grid.ac/) 
+
+- [Microsoft Academic](https://academic.microsoft.com/home)
+
+- [Scopus](https://www.elsevier.com/solutions/scopus)
+
+- [SciVal](https://www.elsevier.com/solutions/scival)
+
+- [Web of Science](https://clarivate.com/webofsciencegroup)
+
+- [InCites](https://clarivate.com/webofsciencegroup/solutions/incites/)
+
+- [Мониторинг вузов Минобрнауки](https://monitoring.miccedu.ru/?m=vpo)
+
+- [eLIBRARY.RU](https://elibrary.ru/defaultx.asp?).
+
+Все версии датасета будут доступны на Zenodo: https://zenodo.org/communities/riro/. 
+
+Процитировать датасет (без указания версии): 
+
+- Sterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290
+
+Фрагменты кода и примеры использования будут собираться на странице [Examples](https://openriro.github.io/examples.html).
+
+## Зачем всё это? {#why_riro} 
+
+Основная цель создания RIRO – открыть и связать профили и идентификаторы российских научных организаций в информационных системах. Объединение и соотнесение данных из этих систем необходимо как для изучения, так и для управления сетью организаций на современном этапе развития науки и данных о ней.
+
+Работа по созданию RIRO заключается далеко не только в механическом соединении источников. У каждого из существующих идентификаторов свои "детские болезни": одни стараются быстро реагировать на переименования и реорганизации, но полностью переписывают историю со всеми правопредшественниками; другие, напротив, привязываются к "славным" именам ~~мифических героев~~, которые уже не актуальны. В результате одна организация в различных сервисах может быть представлена совершенно различными наборами идентификаторов, что уменьшает и без этого ограниченную применимость наукометрических инструментов для анализа российской науки.
+
+Опубликованный датасет нацелен на решение следующих задач: 
+
+- предоставить в распоряжение исследователей наборы идентификаторов, учитывающих особенности структуры и истории трансформации российских научных организаций.
+
+- отразить актуальность и полноту сведений о российских научных организациях в проприетарных и открытых сервисах.
+
+- привлечь внимание исследователей к возможностях новых информационно-аналитических сервисов.
+
+- выбранный подход – публикация только идентификаторов и профилей, но не самих показателей – позволяет открыто объединить разнообразные источники данных из коммерческих и некоммерческих, российских и иностранных систем. 
+
+## What is RIRO?
+
+[RIRO](https://github.com/OpenRIRO), as the article's title suggests, is a project launched in May 2021 and devoted to the Russian organizations doing research. What title does not tell is that RIRO was designed as a public, open, and autonomous project, where 
+
+- **public** tells that anyone can use it (free as in speech);  
+- **open** suggests that anyone can contribute to it (no strings attached); 
+- **autonomous** stresses the fact that the project is self-governed (free as a bird).  
+
+In its current form RIRO v.1.0 is a set of tables linking the organization identifiers and profiles from various international registries (see a list below) to the Russian legal entities. 
+
+- [Wikidata](https://www.wikidata.org/)
+
+- [ROR](https://ror.org/)
+
+- [GRID](https://www.grid.ac/) 
+
+- [Microsoft Academic](https://academic.microsoft.com/home)
+
+- [Scopus](https://www.elsevier.com/solutions/scopus)
+
+- [SciVal](https://www.elsevier.com/solutions/scival)
+
+- [Web of Science](https://clarivate.com/webofsciencegroup)
+
+- [InCites](https://clarivate.com/webofsciencegroup/solutions/incites/)
+
+- [University Monitoring System by the Ministry of Science & Higher Education](https://monitoring.miccedu.ru/?m=vpo).  
+
+- [eLIBRARY.RU](https://elibrary.ru/defaultx.asp?).
+
+All files are available at Zenodo: https://zenodo.org/communities/riro/.
+
+To cite RIRO dataset (without version): 
+
+- Sterligov, Ivan, & Lutay, Aleksei. (2021). Russian Index of the Research Organizations (RIRO) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4775290
+
+The code and examples of use will be shared via [Examples](https://openriro.github.io/examples.html) page.
+
+## Why do we need RIRO?  
+
+The project's main purpose is to create and link the profiles (PID) corresponding to the Russian research organizations in the various information systems. One may argue that in those identifiers are already assigned to some organizaions. It looks so, but each register of identifiers has its own handicaps - some are trying to keep the most updated orgnames and rename the accounts, wiping out old names and connections; the others have more conservative record update policy and provide a lot of obsolete names; most do not follow the Russian  mergers in science; and none is great in covering the small organizations (which is a terra incognita for any citation index). As a result, the identifiers provided by the international services suffer from a patchy coverage and have a limited value for the research assessment and scientometric analysis.
+
+With the RIRO we aim to:
+
+- create, update, and share a public dataset of the organization identifiers that reflects not only their current statuses, but also their recent (at least) transformations;
+
+- asssess how complete is a representation of the Russian organizations in the international registries; 
+
+- attract the researh community's attention to the new information services and its features.

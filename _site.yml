@@ -1,0 +1,28 @@
+name: "OpenRIRO"
+title: "Russian Index of Research Organizations"
+theme: theme.css
+description: |
+  Using R to solve the practical tasks in the library information science and other fields.  
+output_dir: "_site"
+base_url: https:/openriro.github.io/
+google_analytics: "G-1WH3PE2C1Z"
+rss:
+  full_content: false
+navbar:
+  right:
+    - text: "Main"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Sources"
+      href: sources.html        
+    - text: "Examples"
+      href: examples.html      
+    - icon: fa fa-rss
+      href: index.xml
+collections:
+  posts:
+      authors_metadata: false
+      feed_items_max: false
+      share: [twitter, linkedin, facebook]
+output: distill::distill_article
