@@ -9,6 +9,20 @@
     <generator>Distill</generator>
     <lastBuildDate>Mon, 26 Jul 2021 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Скачиваем датасет RIRO с Zenodo</title>
+      <dc:creator>Aleksei Lutai</dc:creator>
+      <dc:creator>Ivan Sterligov</dc:creator>
+      <link>https:/openriro.github.io/posts/download-riro-with-r</link>
+      <description>Рассмотрены несколько способов загрузки последней версии датасета RIRO с репозитория Zenodo. Примеры кода приведены на языке R.</description>
+      <category>riro</category>
+      <category>zenodo</category>
+      <category>r</category>
+      <category>zen4R</category>
+      <guid>https:/openriro.github.io/posts/download-riro-with-r</guid>
+      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https:/openriro.github.io/posts/download-riro-with-r/images/zenodo.png" medium="image" type="image/png" width="769" height="408"/>
+    </item>
+    <item>
       <title>RIRO версия 1.1</title>
       <dc:creator>Aleksei Lutai</dc:creator>
       <dc:creator>Ivan Sterligov</dc:creator>
@@ -45,20 +59,6 @@
       <guid>https:/openriro.github.io/posts/rirov11eng</guid>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
       <media:content url="https:/openriro.github.io/posts/rirov11eng/images/chart_examples_v1.1_eng.png" medium="image" type="image/png" width="2834" height="1574"/>
-    </item>
-    <item>
-      <title>Скачиваем датасет RIRO с Zenodo</title>
-      <dc:creator>Aleksei Lutai</dc:creator>
-      <dc:creator>Ivan Sterligov</dc:creator>
-      <link>https:/openriro.github.io/posts/download-riro-with-r</link>
-      <description>Рассмотрены несколько способов загрузки последней версии датасета RIRO с репозитория Zenodo. Примеры кода приведены на языке R.</description>
-      <category>riro</category>
-      <category>zenodo</category>
-      <category>r</category>
-      <category>zen4R</category>
-      <guid>https:/openriro.github.io/posts/download-riro-with-r</guid>
-      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/download-riro-with-r/images/zenodo.png" medium="image" type="image/png" width="769" height="408"/>
     </item>
     <item>
       <title>RIRO v.1.0 (eng)</title>
