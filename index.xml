@@ -7,7 +7,21 @@
     <description>Using R to solve the practical tasks in the library information science and other fields.  
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 26 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>RIRO для идентификации организаций-учредителей научных изданий</title>
+      <dc:creator>Коллектив RIRO</dc:creator>
+      <link>https:/openriro.github.io/posts/riro-rkn-journals</link>
+      <description>Описан практический подход к связыванию идентификаторов из RIRO с изданиями из реестра СМИ Роскомнадзора. На Github представлен R скрипт для парсинга XML файла РКН.</description>
+      <category>riro</category>
+      <category>russian data</category>
+      <category>r</category>
+      <category>journal metadata</category>
+      <category>roskomndazor</category>
+      <guid>https:/openriro.github.io/posts/riro-rkn-journals</guid>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      <media:content url="https:/openriro.github.io/posts/riro-rkn-journals/riro-rkn-journals_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Скачиваем датасет RIRO с Zenodo</title>
       <dc:creator>Aleksei Lutai</dc:creator>

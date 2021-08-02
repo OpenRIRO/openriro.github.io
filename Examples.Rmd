@@ -23,8 +23,10 @@ output:
     toc_float: true
 ---
 
-- [WoS-Fractional-Counting-Script](https://github.com/IvanSterligov/WoS-Fractional-Counting-Script) - скрипт на Python для фракционного подсчёта вклада организаций по данным Web of Science  
+- [WoS-Fractional-Counting-Script](https://github.com/IvanSterligov/WoS-Fractional-Counting-Script) - скрипт на Python для фракционного подсчёта вклада организаций по данным Web of Science.  
 
-- [University-fractional-counting-with-Pybliometrics](https://github.com/IvanSterligov/WoS-Fractional-Counting-Script) - скрипт на Python для фракционного подсчёта вклада организаций по данным Scopus
+- [University-fractional-counting-with-Pybliometrics](https://github.com/IvanSterligov/WoS-Fractional-Counting-Script) - скрипт на Python для фракционного подсчёта вклада организаций по данным Scopus.
 
-- [Скачиваем датасет RIRO с Zenodo](https://openriro.github.io/posts/download-riro-with-r) - способы скачивания последней версии датасета RIRO с примера на R  
+- [Скачиваем датасет RIRO с Zenodo](https://openriro.github.io/posts/download-riro-with-r) - способы скачивания последней версии датасета RIRO с примера на R.
+
+- [Используем RIRO для привязки научных изданий из реестра СМИ Роскомнадзора с организациями-учредителями](https:/openriro.github.io/posts/riro-rkn-journals/) -  Описан практический подход к связыванию идентификаторов из RIRO с изданиями из реестра СМИ Роскомнадзора. На Github представлен R скрипт для парсинга XML файла РКН.  
