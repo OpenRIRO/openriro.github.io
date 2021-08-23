@@ -186,6 +186,8 @@ code, code.r{
   font-weight: 400;
   font-size: 1em;
   padding: 1px 0px;
+  word-wrap: break-word; 
+  white-space: pre-wrap;
 }
 
 d-article div.sourceCode code, 
