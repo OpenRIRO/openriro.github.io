@@ -34,14 +34,14 @@
       ],
       "date": "07-25-2021",
       "contents": "\r\nWoS-Fractional-Counting-Script - скрипт на Python для фракционного подсчёта вклада организаций по данным Web of Science.\r\nUniversity-fractional-counting-with-Pybliometrics - скрипт на Python для фракционного подсчёта вклада организаций по данным Scopus.\r\nСкачиваем датасет RIRO с Zenodo - способы скачивания последней версии датасета RIRO с примера на R.\r\nИспользуем RIRO для привязки научных изданий из реестра СМИ Роскомнадзора с организациями-учредителями - Описан практический подход к связыванию идентификаторов из RIRO с изданиями из реестра СМИ Роскомнадзора. На Github представлен R скрипт для парсинга XML файла РКН.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-02T22:47:37+03:00"
+      "last_modified": "2021-08-03T00:05:28+03:00"
     },
     {
       "path": "index.html",
       "title": "OpenRIRO",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-02T22:42:46+03:00"
+      "last_modified": "2021-08-23T14:20:44+03:00"
     },
     {
       "path": "sources.html",
