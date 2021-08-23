@@ -2,8 +2,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>Russian Index of Research Organizations</title>
-    <link>https:/openriro.github.io/</link>
-    <atom:link href="https:/openriro.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    <link>https://openriro.github.io/</link>
+    <atom:link href="https://openriro.github.io/index.xml" rel="self" type="application/rss+xml"/>
     <description>Using R to solve the practical tasks in the library information science and other fields.  
 </description>
     <generator>Distill</generator>
@@ -11,7 +11,7 @@
     <item>
       <title>Использование массива RIRO дла анализа регионального сотрудничества в Scopus и SciVal</title>
       <dc:creator>Коллектив RIRO</dc:creator>
-      <link>https:/openriro.github.io/posts/regional-collaboration</link>
+      <link>https://openriro.github.io/posts/regional-collaboration</link>
       <description>В материале описаны основные подходы к анализу прямого межрегионального научного сотрудничества российских организаций по данным Scopus и SciVal. Для анализа использовались идентификаторы RIRO и открытые данные из Wikidata и GeoNames.</description>
       <category>riro</category>
       <category>russian data</category>
@@ -19,43 +19,43 @@
       <category>research collaboration</category>
       <category>scival</category>
       <category>scopus</category>
-      <guid>https:/openriro.github.io/posts/regional-collaboration</guid>
+      <guid>https://openriro.github.io/posts/regional-collaboration</guid>
       <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/regional-collaboration/images/map_region.png" medium="image" type="image/png" width="2677" height="1889"/>
+      <media:content url="https://openriro.github.io/posts/regional-collaboration/images/map_region.png" medium="image" type="image/png" width="2677" height="1889"/>
     </item>
     <item>
       <title>RIRO для идентификации организаций-учредителей научных изданий</title>
       <dc:creator>Коллектив RIRO</dc:creator>
-      <link>https:/openriro.github.io/posts/riro-rkn-journals</link>
+      <link>https://openriro.github.io/posts/riro-rkn-journals</link>
       <description>Описан практический подход к связыванию идентификаторов из RIRO с изданиями из реестра СМИ Роскомнадзора. На Github представлен R скрипт для парсинга XML файла РКН.</description>
       <category>riro</category>
       <category>russian data</category>
       <category>r</category>
       <category>journal metadata</category>
       <category>roskomndazor</category>
-      <guid>https:/openriro.github.io/posts/riro-rkn-journals</guid>
+      <guid>https://openriro.github.io/posts/riro-rkn-journals</guid>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/riro-rkn-journals/riro-rkn-journals_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+      <media:content url="https://openriro.github.io/posts/riro-rkn-journals/riro-rkn-journals_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>Скачиваем датасет RIRO с Zenodo</title>
       <dc:creator>Aleksei Lutai</dc:creator>
       <dc:creator>Ivan Sterligov</dc:creator>
-      <link>https:/openriro.github.io/posts/download-riro-with-r</link>
+      <link>https://openriro.github.io/posts/download-riro-with-r</link>
       <description>Рассмотрены несколько способов загрузки последней версии датасета RIRO с репозитория Zenodo. Примеры кода приведены на языке R.</description>
       <category>riro</category>
       <category>zenodo</category>
       <category>r</category>
       <category>zen4R</category>
-      <guid>https:/openriro.github.io/posts/download-riro-with-r</guid>
+      <guid>https://openriro.github.io/posts/download-riro-with-r</guid>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/download-riro-with-r/images/zenodo.png" medium="image" type="image/png" width="769" height="408"/>
+      <media:content url="https://openriro.github.io/posts/download-riro-with-r/images/zenodo.png" medium="image" type="image/png" width="769" height="408"/>
     </item>
     <item>
       <title>RIRO версия 1.1</title>
       <dc:creator>Aleksei Lutai</dc:creator>
       <dc:creator>Ivan Sterligov</dc:creator>
-      <link>https:/openriro.github.io/posts/rirov11</link>
+      <link>https://openriro.github.io/posts/rirov11</link>
       <description>Версия 1.1 открытого индекса российских научных организаций - идентификаторы РИНЦ/eLIBRARY, указатели ведомственной принадлежности и ещё больше организаций.</description>
       <category>riro</category>
       <category>ror</category>
@@ -66,15 +66,15 @@
       <category>web of science</category>
       <category>incites</category>
       <category>elibrary</category>
-      <guid>https:/openriro.github.io/posts/rirov11</guid>
+      <guid>https://openriro.github.io/posts/rirov11</guid>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/rirov11/images/chart_examples_v1.1.png" medium="image" type="image/png" width="2834" height="1574"/>
+      <media:content url="https://openriro.github.io/posts/rirov11/images/chart_examples_v1.1.png" medium="image" type="image/png" width="2834" height="1574"/>
     </item>
     <item>
       <title>RIRO v.1.1 (eng)</title>
       <dc:creator>Aleksei Lutai</dc:creator>
       <dc:creator>Ivan Sterligov</dc:creator>
-      <link>https:/openriro.github.io/posts/rirov11eng</link>
+      <link>https://openriro.github.io/posts/rirov11eng</link>
       <description>The first update of the Russian Index of Research Organizations (RIRO) project (version 1.1).</description>
       <category>riro</category>
       <category>ror</category>
@@ -85,15 +85,15 @@
       <category>web of science</category>
       <category>incites</category>
       <category>elibrary</category>
-      <guid>https:/openriro.github.io/posts/rirov11eng</guid>
+      <guid>https://openriro.github.io/posts/rirov11eng</guid>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/rirov11eng/images/chart_examples_v1.1_eng.png" medium="image" type="image/png" width="2834" height="1574"/>
+      <media:content url="https://openriro.github.io/posts/rirov11eng/images/chart_examples_v1.1_eng.png" medium="image" type="image/png" width="2834" height="1574"/>
     </item>
     <item>
       <title>RIRO v.1.0 (eng)</title>
       <dc:creator>Aleksei Lutai</dc:creator>
       <dc:creator>Ivan Sterligov</dc:creator>
-      <link>https:/openriro.github.io/posts/rirov10eng</link>
+      <link>https://openriro.github.io/posts/rirov10eng</link>
       <description>A detailed description of the Russian Index of Research Organizations (RIRO) project (version 1.0).</description>
       <category>riro</category>
       <category>ror</category>
@@ -104,15 +104,15 @@
       <category>web of science</category>
       <category>incites</category>
       <category>elibrary</category>
-      <guid>https:/openriro.github.io/posts/rirov10eng</guid>
+      <guid>https://openriro.github.io/posts/rirov10eng</guid>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/rirov10eng/images/chart_upset_eng.png" medium="image" type="image/png" width="2834" height="1574"/>
+      <media:content url="https://openriro.github.io/posts/rirov10eng/images/chart_upset_eng.png" medium="image" type="image/png" width="2834" height="1574"/>
     </item>
     <item>
       <title>RIRO версия 1.0</title>
       <dc:creator>Aleksei Lutai</dc:creator>
       <dc:creator>Ivan Sterligov</dc:creator>
-      <link>https:/openriro.github.io/posts/rirov10</link>
+      <link>https://openriro.github.io/posts/rirov10</link>
       <description>Версия 1.0 открытого индекса российских научных организаций.</description>
       <category>riro</category>
       <category>ror</category>
@@ -123,9 +123,9 @@
       <category>web of science</category>
       <category>incites</category>
       <category>elibrary</category>
-      <guid>https:/openriro.github.io/posts/rirov10</guid>
+      <guid>https://openriro.github.io/posts/rirov10</guid>
       <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
-      <media:content url="https:/openriro.github.io/posts/rirov10/images/chart_upset.png" medium="image" type="image/png" width="2834" height="1574"/>
+      <media:content url="https://openriro.github.io/posts/rirov10/images/chart_upset.png" medium="image" type="image/png" width="2834" height="1574"/>
     </item>
   </channel>
 </rss>
