@@ -7,9 +7,9 @@
     <description>Using R to solve the practical tasks in the library information science and other fields.  
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Использование массива RIRO дла анализа регионального сотрудничества в Scopus и SciVal</title>
+      <title>Использование массива RIRO для изучения регионального сотрудничества в Scopus и SciVal</title>
       <dc:creator>Коллектив RIRO</dc:creator>
       <link>https://openriro.github.io/posts/regional-collaboration</link>
       <description>В материале описаны основные подходы к анализу прямого межрегионального научного сотрудничества российских организаций по данным Scopus и SciVal. Для анализа использовались идентификаторы RIRO и открытые данные из Wikidata и GeoNames.</description>
@@ -20,7 +20,7 @@
       <category>scival</category>
       <category>scopus</category>
       <guid>https://openriro.github.io/posts/regional-collaboration</guid>
-      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
       <media:content url="https://openriro.github.io/posts/regional-collaboration/images/map_region.png" medium="image" type="image/png" width="2677" height="1889"/>
     </item>
     <item>
@@ -34,7 +34,7 @@
       <category>journal metadata</category>
       <category>roskomndazor</category>
       <guid>https://openriro.github.io/posts/riro-rkn-journals</guid>
-      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
       <media:content url="https://openriro.github.io/posts/riro-rkn-journals/riro-rkn-journals_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
