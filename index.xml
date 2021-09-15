@@ -7,7 +7,25 @@
     <description>Using R to solve the practical tasks in the library information science and other fields.  
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>RIRO версия 1.2</title>
+      <dc:creator>Коллектив RIRO</dc:creator>
+      <link>https://openriro.github.io/posts/rirov12</link>
+      <description>Очередной релиз открытого индекса российских научных организаций RIRO включает почти 400 новых организаций, а также значительно расширенные таблицы индентификаторов Wikidata и Scopus.</description>
+      <category>riro</category>
+      <category>ror</category>
+      <category>wikidata</category>
+      <category>microsoft academic</category>
+      <category>scopus</category>
+      <category>scival</category>
+      <category>web of science</category>
+      <category>incites</category>
+      <category>elibrary</category>
+      <guid>https://openriro.github.io/posts/rirov12</guid>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://openriro.github.io/posts/rirov12/images/chart_upset_v1.2.png" medium="image" type="image/png" width="2834" height="1889"/>
+    </item>
     <item>
       <title>Использование массива RIRO для изучения регионального сотрудничества в Scopus и SciVal</title>
       <dc:creator>Коллектив RIRO</dc:creator>
@@ -20,7 +38,7 @@
       <category>scival</category>
       <category>scopus</category>
       <guid>https://openriro.github.io/posts/regional-collaboration</guid>
-      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
       <media:content url="https://openriro.github.io/posts/regional-collaboration/images/map_region.png" medium="image" type="image/png" width="2677" height="1889"/>
     </item>
     <item>
