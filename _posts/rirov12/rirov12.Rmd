@@ -62,9 +62,9 @@ options(DT.options = list(pageLength = 5, dom = "Brftip",
     url = 'https://cdn.datatables.net/plug-ins/1.10.11/i18n/Russian.json')))
 ```
 
-<!-- ::: {#hello .translation} -->
-<!-- [ENGLISH VERSION](https://openriro.github.io/posts/rirov11eng) -->
-<!-- ::: -->
+::: {#hello .translation}
+[ENGLISH VERSION](https://openriro.github.io/posts/rirov12eng)
+:::
 
 ## RIRO (версия 1.2) 
 
